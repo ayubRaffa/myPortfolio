@@ -40,6 +40,21 @@
     -webkit-text-stroke: 1px #561171;
   }
 
+  .gradient {
+    /* 23273F */
+    background: linear-gradient(90.44deg, #410d55 0.39%, #536976 99.68%);
+  }
+
+  .gradient2 {
+    /* 23273F */
+    background: linear-gradient(90.44deg, #410d5550 0.39%, #410d5520 99.68%);
+  }
+
+  .gradient3 {
+    /* 23273F */
+    background: linear-gradient(to top, #410d55 0.39%, #410d5520 99.68%);
+  }
+
 }
 
 
@@ -88,11 +103,7 @@
   display: inline;
 } */
 
-.gradient {
-  /* 23273F */
-  background: linear-gradient(90.44deg, #410d55 0.39%, #536976 99.68%);
 
-}
 
 .azer::after {
   pointer-events: none;
