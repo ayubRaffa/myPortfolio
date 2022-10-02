@@ -23,7 +23,7 @@ const Index = () => {
         {/* headers */}
         <div className="relative  min-h-screen mx-[6.5rem] max-w-[40%] flex justify-start items-center">
           <div className="flex flex-col justify-center gap-8">
-            <h1 className='text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub
+            <h1 className='text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub <br />
               i make web sites, and other <pre>stuff &#x1F604;</pre>
             </h1>
             <h2 className='text-3xl font-bold stroke-pink-2 lg:text-3xl '>
@@ -50,14 +50,88 @@ const Index = () => {
           <Article icon={<FaHome size='2rem' fill='#3378a0' />} content={'40070,marrakech morocco'} />
         </div>
         <div className='w-[1px] gradient' />
-        <div className="w-40"></div>
+        <div className="relative">
+          <h3 className='text-xl uppercase'>ayoub raffiai idrissi <span>28</span></h3>
+          {/*  <h3 className='absolute top-0 left-0 right-0 blur-mq bg-blue-500 z-10 text-xl uppercase'>ayoub raffiai idrissi <span>28</span></h3>
+        */} </div>
         <div className='absolute bottom-0 right-0 left-0 h-40  gradient3 pointer-events-none z-10' />
       </section >
 
       {/*    */}
       <section className="relative h-[50rem] bg-backgound2 overflow-visible">
         {/* second personal image */}
-        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[8rem] -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
+        <img src={perso2_gradient} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[2rem] w-[80%] md:w-[calc(40rem+5%)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
           <h1 className='flex-1'> <strong></strong></h1>
           <h1 className='flex-1 py-10 text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-yellow'>i maybe just a beginner but i may become the
