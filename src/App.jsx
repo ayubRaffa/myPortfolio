@@ -4,6 +4,7 @@ import './index.css'
 import Navbar from './components/Navbar';
 import Index from './components/Index';
 import Footer from './components/Footer';
+import gif from './assets/Infinity.gif'
 
 
 const App = () => {
@@ -35,7 +36,10 @@ const App = () => {
 
 const CustomLoader = () => {
   return (
-    <div className='loader'>CustomLoader</div>
+    <div className='loader'>
+     {/*  <video src={loader_vd} type="video/mp4" autoplay loop width="100px"></video>
+ */} <img src={gif} alt="" width="100px" />
+    </div>
   )
 }
 
