@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+
   body {
-    @apply text-white
+    @apply text-white;
   }
 
   pre,
@@ -28,6 +29,13 @@
   span {
     @apply text-gray-400 text-xs
   }
+
+  img {
+    cursor: pointer;
+
+
+  }
+
 }
 
 @layer utilities {
@@ -62,7 +70,18 @@
     /*  background: linear-gradient(to top, #0d1117 0.39%, #410d5520 99.68%);*/
   }
 
+  .hexagon {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    place-content: center;
+  }
+
+  .hexagon img {
+  }
+
+  .hexagon img:hover {}
 }
+
 
 
 

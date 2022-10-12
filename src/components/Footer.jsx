@@ -28,20 +28,7 @@ const Footer = () => {
 
             </div>
             <div className="overflow-hidden" ref={footer}>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
-                <p>jlqsjdlfjdslkfjsqlfjsq</p>
+
             </div>
 
         </div>

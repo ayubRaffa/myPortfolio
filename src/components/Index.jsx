@@ -1,13 +1,97 @@
+import gsap from 'gsap';
 import React, { useRef, useState } from 'react'
+import { useEffect } from 'react';
 import { FaGithub, FaFacebookMessenger, FaHome, FaWhatsapp, FaCopy } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5'
 import perso from '../assets/perso.png'
 import perso2 from '../assets/perso2.png'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Cta from './Cta';
 
 const Index = () => {
   const toCopy = useRef()
+  const animate = useRef()
+  useEffect(() => {
+
+    gsap.registerPlugin(ScrollTrigger)
+    let ctx = gsap.context(() => {
+
+      const timeline = gsap.timeline({ defaults: { duration: 1 } })
+      gsap.to(".hexagon .c", {
+        scrollTrigger: {
+          trigger: ".c",
+          start: "0 100%",
+          end: "0 100",
+          scrub: true,
+        },
+        rotate: 180,
+
+      })
+      gsap.to(".hexagon h2", {
+        scrollTrigger: {
+          scrub: 1,
+          trigger: ".c",
+        },
+        translateY: 300,
+        opacity: 1,
+        delay: 1
+      })
+      gsap.to(".hexagon p", {
+        scrollTrigger: {
+          scrub: true,
+          trigger: ".c",
+        },
+        translateY: 400,
+        opacity: .6,
+        ease: "power.out",
+        delay: 1
+      })
+      gsap.to(".hexagon img.br", {
+        scrollTrigger: {
+          trigger: ".c",
+          scrub: true
+        },
+        x: '+=50%',
+        y: '+=80%',
+      },)
+      gsap.to(".hexagon img.bl", {
+        scrollTrigger: {
+          trigger: ".c",
+          scrub: true
+        },
+        x: '-=50%',
+        y: '+=80%',
+      },)
+      gsap.to(".hexagon img.tl", {
+        scrollTrigger: {
+          trigger: ".c",
+          scrub: true
+        },
+        x: '-=100%',
+        y: '+=80%',
+        zIndex: 30,
+      },)
+      gsap.to(".hexagon img.tr", {
+        scrollTrigger: {
+          trigger: ".c",
+          scrub: true
+        },
+        x: '+=100%',
+        y: '+=80%',
+        zIndex: 30,
+      },)
+      gsap.to(".hexagon .right", {
+        scrollTrigger: ".c",
+        x: '+=10%',
+      })
+      gsap.to(".hexagon .left", {
+        scrollTrigger: ".c",
+        x: '-=10%',
+      })
+
+    }, animate)
+  }, [animate])
 
 
 
@@ -21,11 +105,11 @@ const Index = () => {
         <div className='absolute -z-0 -top-20 -left-20 h-2/3 right-1/3 blur-[100px] opacity-10 rounded-full bg-blue-500 ' />
         {/* headers */}
         <div className="relative  min-h-screen lg:w-1/2  px-4 md:ml-6 flex justify-start items-center">
-          <div className="flex flex-col justify-center gap-8 text-right md:text-left">
+          <div className="flex flex-col justify-center  text-right md:text-left ">
             <h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub <br />
               i make web sites, and other <pre>stuff &#x1F604;</pre>
             </h1>
-            <h2 className='text-2xl font-bold stroke-pink-2 lg:text-3xl '>
+            <h2 className='text-2xl font-bold stroke-pink-2 lg:text-3xl'>
               by the way, i am not a programmer !
               im just someone who
               loves
@@ -68,12 +152,44 @@ const Index = () => {
       </section>
 
 
-      <section className="border h-96 bg-backgound2 bg-[url('../src/assets/pc.jpg')] bg-no-repeat bg-cover bg-blend-color-dodge">
+      <section className="h-96 bg-backgound2 bg-[url('../src/assets/pc.jpg')] bg-no-repeat bg-cover bg-blend-color-dodge">
         <div className="flex justify-between items-center h-full">
           <div className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!</div>
           <div className="text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur odio doloribus nam laborum laudantium eius rerum nulla illum a est, neque ad accusamus ut asperiores saepe, fugiat natus vero.</div>
         </div>
       </section>
+
+      {/* skills */}
+      <section className="azer relative bg-backgound2 " ref={animate}>
+        <div className="relative mx-auto pb-[200px] border hexagon    ">
+          {/* left hexagon */}
+          <div className="left relative ">
+            <img src="../src/assets/nodejs.png" alt="" className='l z-20 ' />
+            <img src="../src/assets/react-query.png" alt="top left" className='tl absolute top-0 left-0   ' />
+            <img src="../src/assets/php.png" alt=" bottom left" className='bl absolute top-0 left-0 ' />
+
+
+          </div>
+          {/* center hexagon */}
+          <div className="centerr relative">
+            <img src="../src/assets/react.png" alt="" className='c z-20' />
+            <img src="../src/assets/jquery.png" alt=" bottom left" className='bl absolute top-0 left-0 ' />
+            <img src="../src/assets/gsap.png" alt=" bottom right" className='br absolute top-0 left-0' />
+            <img src="../src/assets/postgres.png" alt="top left" className='tl absolute top-0 left-0  ' />
+            <img src="../src/assets/nodejs.png" alt="top right" className='tr absolute top-0 left-0 ' />
+          </div>
+          {/* rigth hexagon */}
+          <div className="right relative ">
+            <img src="../src/assets/tailwind.png" alt="" className='r z-20 ' />
+            <img src="../src/assets/sass.png" alt=" bottom right" className='br absolute top-0 left-0' />
+            <img src="../src/assets/git.png" alt="top right" className='tr absolute top-0 left-0 ' />
+          </div>
+          <div className='buttom absolute -top-1 -bottom-1 -right-1 -left-1 bg-gradient-to-r from-backgound2 to-backgound2  via-transparent pointer-events-none' />
+          <h2 className='absolute w-full   lg:px-[20%] text-center  top-5  text-2xl opacity-0 '>my set of skills so far</h2>
+          <p className='absolute w-full   lg:px-[20%] text-center top-5  text-lg opacity-0 '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illum, officiis itaque sequi suscipit consectetur qui facilis aliquid quasi saepe maxime ullam alias accusamus numquam quae odit fuga porro enim.</p>
+        </div>
+      </section>
+      <section className='h-96'></section>
     </ >
   )
 }

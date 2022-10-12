@@ -38,8 +38,8 @@ module.exports = {
       fontFamily: {
         text: ['Comfortaa', 'cursive'],
         header: ['Milonga', 'monospace'],
-      }
-
+      },
+      
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
       colors: {
         default: "#9C92AC",
         "pink": "#410d5520",
-        "gray":"#fff50"
-          //also works with rgb(0,0,205)
+        "gray": "#fff50"
+        //also works with rgb(0,0,205)
       },
 
       // The foreground opacity
