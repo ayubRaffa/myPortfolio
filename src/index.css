@@ -77,9 +77,14 @@
   }
 
   .hexagon img {
+    transition: all .3s ease;
+    filter: contrast(100%)
   }
 
-  .hexagon img:hover {}
+  .hexagon img:hover,
+  .hexagon img:focus {
+    filter: contrast(150%)
+  }
 }
 
 

@@ -1,11 +1,21 @@
 import gsap from 'gsap';
 import React, { useRef, useState } from 'react'
 import { useEffect } from 'react';
-import { FaGithub, FaFacebookMessenger, FaHome, FaWhatsapp, FaCopy } from 'react-icons/fa';
-import { IoMail } from 'react-icons/io5'
+import { FaGithub, FaFacebookMessenger, FaHome, FaWhatsapp, FaCopy, FaTimes } from 'react-icons/fa';
+import { IoMail, } from 'react-icons/io5'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import perso from '../assets/perso.png'
 import perso2 from '../assets/perso2.png'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import react from '../assets/react.png'
+import php from '../assets/php.png'
+import node from '../assets/nodejs.png'
+import postgres from '../assets/postgress.png'
+import jquery from '../assets/jquery.png'
+import reactQuery from '../assets/react-query.png'
+import tailwind from '../assets/tailwind.png'
+import sass from '../assets/sass.png'
+import Gsap from '../assets/gsap.png'
+import git from '../assets/git.png'
 
 import Cta from './Cta';
 
@@ -28,7 +38,7 @@ const Index = () => {
         rotate: 180,
 
       })
-      gsap.to(".hexagon h2", {
+      gsap.to(".hexagon h2.skill", {
         scrollTrigger: {
           scrub: 1,
           trigger: ".c",
@@ -37,7 +47,7 @@ const Index = () => {
         opacity: 1,
         delay: 1
       })
-      gsap.to(".hexagon p", {
+      gsap.to(".hexagon p.skill", {
         scrollTrigger: {
           scrub: true,
           trigger: ".c",
@@ -70,7 +80,6 @@ const Index = () => {
         },
         x: '-=100%',
         y: '+=80%',
-        zIndex: 30,
       },)
       gsap.to(".hexagon img.tr", {
         scrollTrigger: {
@@ -79,21 +88,81 @@ const Index = () => {
         },
         x: '+=100%',
         y: '+=80%',
-        zIndex: 30,
       },)
-      gsap.to(".hexagon .right", {
-        scrollTrigger: ".c",
-        x: '+=10%',
-      })
-      gsap.to(".hexagon .left", {
-        scrollTrigger: ".c",
-        x: '-=10%',
-      })
+
 
     }, animate)
   }, [animate])
 
+  const SkillsInfo = {
+    react: {
+      id: 1,
+      name: 'reactjs',
+      text: 'klfjslkdfj lqsjf lqsjflsqdj f qsdfqs sqdf sq df sqfd ds fs dfsd f sd',
+      src: react
+    },
+    node: {
+      id: 2,
+      name: 'nodejs',
+      text: 'nodejlksdjflkqsjdlf ksqjdfl qsjlsd lqsjflsqdj',
+      src: node
+    },
+    sass: {
+      id: 3,
+      name: 'sass pre-prossecor',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: sass
+    },
+    postgres: {
+      id: 4,
+      name: 'postgresSQL',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: postgres
+    },
+    tailwind: {
+      id: 5,
+      name: 'tailwind',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: tailwind
+    },
+    node: {
+      id: 6,
+      name: 'node.js',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: node
+    },
+    gsap: {
+      id: 7,
+      name: 'greensock',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: Gsap
+    },
+    jquery: {
+      id: 8,
+      name: 'jquery',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: jquery
+    },
+    git: {
+      id: 9,
+      name: "git",
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: git
+    },
+    reactQuery: {
+      id: 10,
+      name: 'react_query',
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: reactQuery
+    },
+    php: {
+      id: 11,
+      name: "php",
+      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
+      src: php
+    }
 
+  }
 
 
   return (
@@ -162,31 +231,34 @@ const Index = () => {
       {/* skills */}
       <section className="azer relative bg-backgound2 " ref={animate}>
         <div className="relative mx-auto pb-[200px] border hexagon    ">
+
           {/* left hexagon */}
           <div className="left relative ">
-            <img src="../src/assets/nodejs.png" alt="" className='l z-20 ' />
-            <img src="../src/assets/react-query.png" alt="top left" className='tl absolute top-0 left-0   ' />
-            <img src="../src/assets/php.png" alt=" bottom left" className='bl absolute top-0 left-0 ' />
-
+            <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'c z-20'} text={SkillsInfo.node.text} />
+            <IconImage src={SkillsInfo.reactQuery.src} alt={SkillsInfo.node.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.reactQuery.text} />
+            <IconImage src={SkillsInfo.php.src} alt={SkillsInfo.php.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.php.text} />
 
           </div>
           {/* center hexagon */}
           <div className="centerr relative">
-            <img src="../src/assets/react.png" alt="" className='c z-20' />
-            <img src="../src/assets/jquery.png" alt=" bottom left" className='bl absolute top-0 left-0 ' />
-            <img src="../src/assets/gsap.png" alt=" bottom right" className='br absolute top-0 left-0' />
-            <img src="../src/assets/postgres.png" alt="top left" className='tl absolute top-0 left-0  ' />
-            <img src="../src/assets/nodejs.png" alt="top right" className='tr absolute top-0 left-0 ' />
+            <IconImage src={SkillsInfo.react.src} alt={SkillsInfo.react.name} classname={'c z-20'} text={SkillsInfo.react.text} />
+            <IconImage src={SkillsInfo.jquery.src} alt={SkillsInfo.jquery.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.jquery.text} />
+            <IconImage src={SkillsInfo.gsap.src} alt={SkillsInfo.gsap.name} classname={'br absolute top-0 left-0'} text={SkillsInfo.gsap.text} />
+            <IconImage src={SkillsInfo.postgres.src} alt={SkillsInfo.postgres.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.postgres.text} />
+            <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.node.text} />
           </div>
+
           {/* rigth hexagon */}
           <div className="right relative ">
-            <img src="../src/assets/tailwind.png" alt="" className='r z-20 ' />
-            <img src="../src/assets/sass.png" alt=" bottom right" className='br absolute top-0 left-0' />
-            <img src="../src/assets/git.png" alt="top right" className='tr absolute top-0 left-0 ' />
+            <IconImage src={SkillsInfo.tailwind.src} alt={SkillsInfo.tailwind.name} classname={'r z-20  '} text={SkillsInfo.tailwind.text} />
+            <IconImage src={SkillsInfo.sass.src} alt={SkillsInfo.sass.name} classname={'br absolute top-0 left-0'} text={SkillsInfo.sass.text} />
+            <IconImage src={SkillsInfo.git.src} alt={SkillsInfo.git.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.git.text} />
+
           </div>
+
           <div className='buttom absolute -top-1 -bottom-1 -right-1 -left-1 bg-gradient-to-r from-backgound2 to-backgound2  via-transparent pointer-events-none' />
-          <h2 className='absolute w-full   lg:px-[20%] text-center  top-5  text-2xl opacity-0 '>my set of skills so far</h2>
-          <p className='absolute w-full   lg:px-[20%] text-center top-5  text-lg opacity-0 '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illum, officiis itaque sequi suscipit consectetur qui facilis aliquid quasi saepe maxime ullam alias accusamus numquam quae odit fuga porro enim.</p>
+          <h2 className='skill absolute w-full   lg:px-[20%] text-center  top-5  text-2xl opacity-0 '>my set of skills so far</h2>
+          <p className='skill absolute w-full   lg:px-[20%] text-center top-5  text-lg opacity-0 '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illum, officiis itaque sequi suscipit consectetur qui facilis aliquid quasi saepe maxime ullam alias accusamus numquam quae odit fuga porro enim.</p>
         </div>
       </section>
       <section className='h-96'></section>
@@ -194,9 +266,7 @@ const Index = () => {
   )
 }
 
-
-
-
+export default Index
 
 
 
@@ -232,5 +302,31 @@ function Article({ icon, content, href }) {
   )
 }
 
+function IconImage({ src, classname, alt, text }) {
+  const [article, setarticle] = useState(null)
 
-export default Index
+  useEffect(() => { console.log('article', article) }, [article])
+  return (
+    <>
+      <img src={src} alt={alt} className={classname} onClick={() => setarticle(text)} />
+
+      {article &&
+        <div className={`fixed top-0 left-0 right-0  bottom-0   z-[100]`} >
+          <div className="  flex  justify-center items-center w-full h-full">
+            <div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96 bg-backgound2 gradient">
+              <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => setarticle(null)}><FaTimes color='white' size={'25px'}  /></div>
+              <div className="">
+                <img src={src} alt="" className='w-fit scale-125 ' />
+              </div>
+              <div className=" flex flex-col justify-center items-center gap-4">
+                <h2 className='text-center text-3xl' >{alt}</h2>
+                <p className='text-center text-xl' >{text}</p>
+              </div>
+            </div>
+          </div>
+        </ div>
+      }
+    </>
+  )
+}
+
