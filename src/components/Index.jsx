@@ -1,23 +1,16 @@
-import gsap from 'gsap';
 import React, { useRef, useState } from 'react'
 import { useEffect } from 'react';
-import { FaGithub, FaFacebookMessenger, FaHome, FaWhatsapp, FaCopy, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaHome, FaWhatsapp, FaCopy, FaTimes } from 'react-icons/fa';
 import { IoMail, } from 'react-icons/io5'
+import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import perso from '../assets/perso.png'
 import perso2 from '../assets/perso2.png'
-import react from '../assets/react.png'
-import php from '../assets/php.png'
-import node from '../assets/nodejs.png'
-import postgres from '../assets/postgress.png'
-import jquery from '../assets/jquery.png'
-import reactQuery from '../assets/react-query.png'
-import tailwind from '../assets/tailwind.png'
-import sass from '../assets/sass.png'
-import Gsap from '../assets/gsap.png'
-import git from '../assets/git.png'
-
+import { SkillsInfo } from './SkillsInfo';
 import Cta from './Cta';
+
+
+
 
 const Index = () => {
   const toCopy = useRef()
@@ -38,24 +31,26 @@ const Index = () => {
         rotate: 180,
 
       })
-      gsap.to(".hexagon h2.skill", {
+      gsap.fromTo(".hexagon h2.skill", { opacity: 0 }, {
         scrollTrigger: {
-          scrub: 1,
+          scrub: 3,
           trigger: ".c",
+          start: "center 100%",
+          end: "center 0%"
         },
         translateY: 300,
         opacity: 1,
-        delay: 1
+        ease: "power.in",
       })
-      gsap.to(".hexagon p.skill", {
+      gsap.fromTo(".hexagon p.skill", { opacity: 0 }, {
         scrollTrigger: {
-          scrub: true,
+          scrub: 3,
           trigger: ".c",
         },
         translateY: 400,
         opacity: .6,
-        ease: "power.out",
-        delay: 1
+        ease: "power.in",
+
       })
       gsap.to(".hexagon img.br", {
         scrollTrigger: {
@@ -92,83 +87,15 @@ const Index = () => {
 
 
     }, animate)
-  }, [animate])
+  }, [])
 
-  const SkillsInfo = {
-    react: {
-      id: 1,
-      name: 'reactjs',
-      text: 'klfjslkdfj lqsjf lqsjflsqdj f qsdfqs sqdf sq df sqfd ds fs dfsd f sd',
-      src: react
-    },
-    node: {
-      id: 2,
-      name: 'nodejs',
-      text: 'nodejlksdjflkqsjdlf ksqjdfl qsjlsd lqsjflsqdj',
-      src: node
-    },
-    sass: {
-      id: 3,
-      name: 'sass pre-prossecor',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: sass
-    },
-    postgres: {
-      id: 4,
-      name: 'postgresSQL',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: postgres
-    },
-    tailwind: {
-      id: 5,
-      name: 'tailwind',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: tailwind
-    },
-    node: {
-      id: 6,
-      name: 'node.js',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: node
-    },
-    gsap: {
-      id: 7,
-      name: 'greensock',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: Gsap
-    },
-    jquery: {
-      id: 8,
-      name: 'jquery',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: jquery
-    },
-    git: {
-      id: 9,
-      name: "git",
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: git
-    },
-    reactQuery: {
-      id: 10,
-      name: 'react_query',
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: reactQuery
-    },
-    php: {
-      id: 11,
-      name: "php",
-      text: 'Lorem lsjflk sqjdlkfsjd kfjl sqkdfjk sdfjlkqsjfd ',
-      src: php
-    }
 
-  }
 
 
   return (
     <>
       {/* hero */}
-      <section className="relative min-h-screen mt-8 bg-[url('../src/assets/background.png')] bg-no-repeat bg-cover" >
+      <main className="relative min-h-screen mt-8 bg-[url('../src/assets/background.png')] bg-no-repeat bg-cover" >
         {/* blured backgound */}
         < div className='absolute -z-0 -bottom-20 -right-20 h-2/3 w-[90vw] lg:w-[60vw] blur-[100px] opacity-20 rounded-full bg-pink-500 ' />
         <div className='absolute -z-0 -top-20 -left-20 h-2/3 right-1/3 blur-[100px] opacity-10 rounded-full bg-blue-500 ' />
@@ -190,7 +117,7 @@ const Index = () => {
         </div>
         {/* personal image */}
         <img src={perso} alt="personal_image" className='absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20 ' />
-      </section >
+      </main >
 
       {/* Info */}
       <section className="relative flex justify-center items-stretch min-h-[500px] gap-6 lg:gap-10 px-1 lg:px-6 py-20 pb-40 azer  bg-hero-cutout-pink-100 z-10 " >{/* rounded-tl-[100px] rounded-tr-[100px] */}
@@ -234,7 +161,7 @@ const Index = () => {
 
           {/* left hexagon */}
           <div className="left relative ">
-            <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'c z-20'} text={SkillsInfo.node.text} />
+            <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'l z-20'} text={SkillsInfo.node.text} />
             <IconImage src={SkillsInfo.reactQuery.src} alt={SkillsInfo.node.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.reactQuery.text} />
             <IconImage src={SkillsInfo.php.src} alt={SkillsInfo.php.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.php.text} />
 
@@ -245,7 +172,7 @@ const Index = () => {
             <IconImage src={SkillsInfo.jquery.src} alt={SkillsInfo.jquery.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.jquery.text} />
             <IconImage src={SkillsInfo.gsap.src} alt={SkillsInfo.gsap.name} classname={'br absolute top-0 left-0'} text={SkillsInfo.gsap.text} />
             <IconImage src={SkillsInfo.postgres.src} alt={SkillsInfo.postgres.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.postgres.text} />
-            <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.node.text} />
+            <IconImage src={SkillsInfo.typescript.src} alt={SkillsInfo.typescript.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.typescript.text} />
           </div>
 
           {/* rigth hexagon */}
@@ -314,7 +241,7 @@ function IconImage({ src, classname, alt, text }) {
         <div className={`fixed top-0 left-0 right-0  bottom-0   z-[100]`} >
           <div className="  flex  justify-center items-center w-full h-full">
             <div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96 bg-backgound2 gradient">
-              <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => setarticle(null)}><FaTimes color='white' size={'25px'}  /></div>
+              <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => setarticle(null)}><FaTimes color='white' size={'25px'} /></div>
               <div className="">
                 <img src={src} alt="" className='w-fit scale-125 ' />
               </div>
