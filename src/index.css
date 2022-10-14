@@ -85,8 +85,21 @@
   .hexagon img:focus {
     filter: contrast(150%)
   }
-}
 
+  /* 
+  .popUp{
+    animation: popUp 1S ease 0S 1;
+  }
+  @keyframes popUp {
+    from{
+      scale: 0%;
+    }
+    to{
+      scale:100%;
+    }
+  }
+ */
+}
 
 
 
@@ -146,4 +159,18 @@
   left: 0;
   right: 0;
   background: linear-gradient(45deg, #410d5500 40%, #410d555a);
+}
+
+.azer2::after {
+  pointer-events: none;
+  color: #0d1355;
+  user-select: none;
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, #0d235500 40%, #000000);
+  z-index: -1;
 }

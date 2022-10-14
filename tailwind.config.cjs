@@ -51,13 +51,14 @@ module.exports = {
       // the list of patterns you want to generate a class for
       // the names must be in kebab-case
       // an empty array will generate all 87 patterns
-      patterns: ["cutout", "hexagons", "stamp-collection"],
+      patterns: ["cutout", "tiny-checkers", "formal-invitation"],
 
       // The foreground colors of the pattern
       colors: {
         default: "#9C92AC",
         "pink": "#410d5520",
-        "gray": "#fff50"
+        "blue":"#0d13555a",
+        "gray": "#fff50",
         //also works with rgb(0,0,205)
       },
 

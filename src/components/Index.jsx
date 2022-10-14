@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import { useEffect } from 'react';
 import { FaGithub, FaHome, FaWhatsapp, FaCopy, FaTimes } from 'react-icons/fa';
 import { IoMail, } from 'react-icons/io5'
@@ -8,7 +8,10 @@ import perso from '../assets/perso.png'
 import perso2 from '../assets/perso2.png'
 import { SkillsInfo } from './SkillsInfo';
 import Cta from './Cta';
-
+import wave from '../assets/wave.svg'
+import wave1 from '../assets/wave1.svg'
+import wave2 from '../assets/wave2.svg'
+import brush from '../assets/brush.jpg'
 
 
 
@@ -20,7 +23,7 @@ const Index = () => {
     gsap.registerPlugin(ScrollTrigger)
     let ctx = gsap.context(() => {
 
-      const timeline = gsap.timeline({ defaults: { duration: 1 } })
+      /*     const timeline = gsap.timeline({ defaults: { duration: 1 } }) */
       gsap.to(".hexagon .c", {
         scrollTrigger: {
           trigger: ".c",
@@ -68,25 +71,47 @@ const Index = () => {
         x: '-=50%',
         y: '+=80%',
       },)
-      gsap.to(".hexagon img.tl", {
-        scrollTrigger: {
-          trigger: ".c",
-          scrub: true
-        },
-        x: '-=100%',
-        y: '+=80%',
-      },)
-      gsap.to(".hexagon img.tr", {
-        scrollTrigger: {
-          trigger: ".c",
-          scrub: true
-        },
-        x: '+=100%',
-        y: '+=80%',
-      },)
+
+      gsap.matchMedia().add("(min-width:789px)", () => {
+        gsap.to(".hexagon img.tl", {
+          scrollTrigger: {
+            trigger: ".c",
+            scrub: true
+          },
+          x: '-=100%',
+          y: '+=80%',
+        },)
+        gsap.to(".hexagon img.tr", {
+          scrollTrigger: {
+            trigger: ".c",
+            scrub: true
+          },
+          x: '+=100%',
+          y: '+=80%',
+        },)
+      })
+      gsap.matchMedia().add("(max-width:789px)", () => {
+        gsap.to(".hexagon img.tl", {
+          scrollTrigger: {
+            trigger: ".c",
+            scrub: true
+          },
+          x: '-=100%',
+          y: '+=180%',
+        },)
+        gsap.to(".hexagon img.tr", {
+          scrollTrigger: {
+            trigger: ".c",
+            scrub: true
+          },
+          x: '+=100%',
+          y: '+=180%',
+        },)
+      })
 
 
     }, animate)
+
   }, [])
 
 
@@ -97,11 +122,12 @@ const Index = () => {
       {/* hero */}
       <main className="relative min-h-screen mt-8 bg-[url('../src/assets/background.png')] bg-no-repeat bg-cover" >
         {/* blured backgound */}
+        <div className="absolute rotate-180 lg:rotate-0 bottom-0 lg:top-0 right-0 w-full h-full md:h-2/3  lg:w-1/2 lg:h-[50rem] bg-[url('../src/assets/pexels6.webp')] md:bg-contain bg-cover   bg-no-repeat bg-blend-color-dodge bg-backgound" />
         < div className='absolute -z-0 -bottom-20 -right-20 h-2/3 w-[90vw] lg:w-[60vw] blur-[100px] opacity-20 rounded-full bg-pink-500 ' />
         <div className='absolute -z-0 -top-20 -left-20 h-2/3 right-1/3 blur-[100px] opacity-10 rounded-full bg-blue-500 ' />
         {/* headers */}
-        <div className="relative  min-h-screen lg:w-1/2  px-4 md:ml-6 flex justify-start items-center">
-          <div className="flex flex-col justify-center  text-right md:text-left ">
+        <div className="relative  min-h-screen lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
+          <div className="flex flex-col justify-center  text-right md:text-left md:-translate-y-20 ">
             <h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub <br />
               i make web sites, and other <pre>stuff &#x1F604;</pre>
             </h1>
@@ -136,7 +162,7 @@ const Index = () => {
       </section >
 
       {/*    */}
-      <section className="relative h-[50rem] bg-backgound2 overflow-visible bg-[url('../src/assets/pexels5.jpg')] bg-cover bg-no-repeat bg-blend-color-dodge ">
+      <section className="relative h-[50rem] bg-backgound2 overflow-visible bg-[url('../src/assets/pexel4.jpg')] bg-contain  bg-no-repeat bg-blend-color-dodge ">
         {/* second personal image */}
         <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
@@ -148,10 +174,24 @@ const Index = () => {
       </section>
 
 
-      <section className="h-96 bg-backgound2 bg-[url('../src/assets/pc.jpg')] bg-no-repeat bg-cover bg-blend-color-dodge">
-        <div className="flex justify-between items-center h-full">
-          <div className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!</div>
-          <div className="text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur odio doloribus nam laborum laudantium eius rerum nulla illum a est, neque ad accusamus ut asperiores saepe, fugiat natus vero.</div>
+
+      <section className="relative h-[60vh] md:h-[90vh]  bg-backgound2 bg-[url('../src/assets/pexels5.jpg')] bg-cover  bg-no-repeat bg-blend-screen bg-left ">
+        {/* <div className="absolute top-0  left-0 right-0 z-60">
+          <img src={wave2} alt="wave" className='rotate-180'/>
+        </div>
+         <div className="absolute top-0  left-0 right-0 z-10">
+       <img src={wave1} alt="wave" className='rotate-180'/>
+        </div>  */}
+        <div className="flex justify-center items-center h-full">
+          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px]">
+            <p className='absolute top-0 left-0 right-0 bottom-0 blur-sm  px-[calc(1rem+5vw)] text-2xl up'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+            </p>
+            <p className='  text-2xl up'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -232,18 +272,29 @@ function Article({ icon, content, href }) {
 function IconImage({ src, classname, alt, text }) {
   const [article, setarticle] = useState(null)
 
-  useEffect(() => { console.log('article', article) }, [article])
+  const handleClick = (e) => {
+    setarticle(e);
+  }
+  useLayoutEffect(() => {
+    gsap.fromTo(".popUp", { scale: 0, opacity: 0 }, {
+      scale: 1,
+      opacity: 1,
+      duration: .4,
+      ease: "power.out",
+      yoyo: true
+    })
+  }, article)
   return (
     <>
-      <img src={src} alt={alt} className={classname} onClick={() => setarticle(text)} />
+      <img src={src} alt={alt} className={classname} onClick={() => handleClick(text)} />
 
       {article &&
-        <div className={`fixed top-0 left-0 right-0  bottom-0   z-[100]`} >
-          <div className="  flex  justify-center items-center w-full h-full">
-            <div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96 bg-backgound2 gradient">
-              <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => setarticle(null)}><FaTimes color='white' size={'25px'} /></div>
+        <div className='fixed top-0 left-0 right-0  bottom-0 z-[100]'>
+          <div className="popUp flex  justify-center items-center w-full h-full">
+            <div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96 bg-hero-tiny-checkers-blue-100 azer2 rounded-tl-full  rounded-bl-full">
+              <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => handleClick(null)}><FaTimes color='white' size={'25px'} /></div>
               <div className="">
-                <img src={src} alt="" className='w-fit scale-125 ' />
+                <img src={src} alt="" className='w-fit scale-110 ' />
               </div>
               <div className=" flex flex-col justify-center items-center gap-4">
                 <h2 className='text-center text-3xl' >{alt}</h2>
