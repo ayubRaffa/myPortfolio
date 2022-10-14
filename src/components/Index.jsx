@@ -126,8 +126,8 @@ const Index = () => {
         < div className='absolute -z-0 -bottom-20 -right-20 h-2/3 w-[90vw] lg:w-[60vw] blur-[100px] opacity-20 rounded-full bg-pink-500 ' />
         <div className='absolute -z-0 -top-20 -left-20 h-2/3 right-1/3 blur-[100px] opacity-10 rounded-full bg-blue-500 ' />
         {/* headers */}
-        <div className="relative  min-h-screen lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
-          <div className="flex flex-col justify-center  text-right md:text-left md:-translate-y-20 ">
+        <div className="relative  min-h-screen md:w-2/3 lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
+          <div className="flex flex-col justify-center  text-right md:text-left pb-28 ">
             <h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub <br />
               i make web sites, and other <pre>stuff &#x1F604;</pre>
             </h1>
