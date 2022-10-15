@@ -12,6 +12,7 @@ import wave from '../assets/wave.svg'
 import wave1 from '../assets/wave1.svg'
 import wave2 from '../assets/wave2.svg'
 import brush from '../assets/brush.jpg'
+import {ctx}  from './GsapAnimation'
 
 
 
@@ -19,99 +20,7 @@ const Index = () => {
   const toCopy = useRef()
   const animate = useRef()
   useEffect(() => {
-
-    gsap.registerPlugin(ScrollTrigger)
-    let ctx = gsap.context(() => {
-
-      /*     const timeline = gsap.timeline({ defaults: { duration: 1 } }) */
-      gsap.to(".hexagon .c", {
-        scrollTrigger: {
-          trigger: ".c",
-          start: "0 100%",
-          end: "0 100",
-          scrub: true,
-        },
-        rotate: 180,
-
-      })
-      gsap.fromTo(".hexagon h2.skill", { opacity: 0 }, {
-        scrollTrigger: {
-          scrub: 3,
-          trigger: ".c",
-          start: "center 100%",
-          end: "center 0%"
-        },
-        translateY: 300,
-        opacity: 1,
-        ease: "power.in",
-      })
-      gsap.fromTo(".hexagon p.skill", { opacity: 0 }, {
-        scrollTrigger: {
-          scrub: 3,
-          trigger: ".c",
-        },
-        translateY: 400,
-        opacity: .6,
-        ease: "power.in",
-
-      })
-      gsap.to(".hexagon img.br", {
-        scrollTrigger: {
-          trigger: ".c",
-          scrub: true
-        },
-        x: '+=50%',
-        y: '+=80%',
-      },)
-      gsap.to(".hexagon img.bl", {
-        scrollTrigger: {
-          trigger: ".c",
-          scrub: true
-        },
-        x: '-=50%',
-        y: '+=80%',
-      },)
-
-      gsap.matchMedia().add("(min-width:789px)", () => {
-        gsap.to(".hexagon img.tl", {
-          scrollTrigger: {
-            trigger: ".c",
-            scrub: true
-          },
-          x: '-=100%',
-          y: '+=80%',
-        },)
-        gsap.to(".hexagon img.tr", {
-          scrollTrigger: {
-            trigger: ".c",
-            scrub: true
-          },
-          x: '+=100%',
-          y: '+=80%',
-        },)
-      })
-      gsap.matchMedia().add("(max-width:789px)", () => {
-        gsap.to(".hexagon img.tl", {
-          scrollTrigger: {
-            trigger: ".c",
-            scrub: true
-          },
-          x: '-=100%',
-          y: '+=180%',
-        },)
-        gsap.to(".hexagon img.tr", {
-          scrollTrigger: {
-            trigger: ".c",
-            scrub: true
-          },
-          x: '+=100%',
-          y: '+=180%',
-        },)
-      })
-
-
-    }, animate)
-
+    ctx(animate)
   }, [])
 
 
@@ -162,20 +71,28 @@ const Index = () => {
       </section >
 
       {/*    */}
-      <section className="relative h-[50rem] bg-backgound2 overflow-visible bg-[url('../src/assets/pexel4.jpg')] bg-contain  bg-no-repeat bg-blend-color-dodge ">
+      <section className="relative h-[150rem] bg-backgound2 overflow-visible bg-[url('../src/assets/pexel4.jpg')] bg-contain  bg-no-repeat bg-blend-color-dodge ">
         {/* second personal image */}
-        <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
+        {/* <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
           <h1 className='flex-1'> <strong></strong></h1>
           <h1 className='flex-1 py-10 text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-yellow'>i maybe just a beginner but i may become the
             <strong className='text-4xl lg:text-6xl font-extrabold uppercase text-[#e0f400] font-header py-2 block'>best</strong>
           </h1>
+        </div> */}
+        <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24">
+          <p className='absolute top-0 left-0 right-0 bottom-0  text-white blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+          </p>
+          <p className='  text-2xl up text-center text-red-4'>
+          </p>
         </div>
       </section>
 
 
 
-      <section className="relative h-[60vh] md:h-[90vh]  bg-backgound2 bg-[url('../src/assets/pexels5.jpg')] bg-cover  bg-no-repeat bg-blend-screen bg-left ">
+      <section className="relative h-[60vh] md:h-[90vh]  bg-backgound2 ">
         {/* <div className="absolute top-0  left-0 right-0 z-60">
           <img src={wave2} alt="wave" className='rotate-180'/>
         </div>
@@ -184,10 +101,10 @@ const Index = () => {
         </div>  */}
         <div className="flex justify-center items-center h-full">
           <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px]">
-            <p className='absolute top-0 left-0 right-0 bottom-0 blur-sm  px-[calc(1rem+5vw)] text-2xl up'>
+            <p className='absolute top-0 left-0 right-0 bottom-0  text-black blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
             </p>
-            <p className='  text-2xl up'>
+            <p className='  text-2xl up text-center text-red-4'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
             </p>
           </div>
