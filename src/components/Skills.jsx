@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap';
 import { FaTimes } from 'react-icons/fa';
+import { SkillsInfo } from './SkillsInfo';
 
 
-const Skills = () => {
+
+const Skills = ({ refer }) => {
     return (
-        <section className="skills_section azer relative bg-backgound2 " ref={animate}>
+        <section className="skills_section azer relative bg-backgound2 " ref={refer}>
             <div className="relative mx-auto pb-[200px] border hexagon    ">
 
                 {/* left hexagon */}

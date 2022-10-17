@@ -111,9 +111,9 @@ const Index = () => {
       </section>
 
       {/* skills */}
-      <Skills />
+      <Skills refer={animate}/>
 
-      
+
       <section className='h-96'></section>
     </ >
   )
