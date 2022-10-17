@@ -10,6 +10,7 @@ import { SkillsInfo } from './SkillsInfo';
 import Cta from './Cta';
 import { ctx } from './GsapAnimation'
 import { Timeline } from 'gsap/gsap-core';
+import r1 from '../assets/robato/0001.webp';
 
 let imagesLIst = []
 const imgmodules = import.meta.glob('../assets/robato/*.webp')
@@ -25,46 +26,46 @@ const Index = () => {
   const toCopy = useRef()
   const robato = useRef([])
   const animate = useRef()
-  const [loadimage, setLoadimage] = useState(null)
-  let i =  1
+  let i = 1
   useEffect(() => {
-    /*   ctx(animate)
-      gsap.to(".skills_section", {
-        // yPercent: -100 * (sections.length - 1),
-        ease: "power.in",
-        scrollTrigger: {
-          trigger: ".skills_section",
-          start: "400px bottom",
-          end: "bottom top",
-          scrub: 1,
-          snap: {
-            snapTo: 1 / 2,
-            directional: false
-          }
-          // end: () => "+=" + document.querySelector('.container').offsetWidth
-   
+    ctx(animate)
+    gsap.to(".skills_section", {
+      // yPercent: -100 * (sections.length - 1),
+      ease: "power.in",
+      scrollTrigger: {
+        trigger: ".skills_section",
+        start: "400px bottom",
+        end: "bottom top",
+        scrub: 1,
+        snap: {
+          snapTo: 1 / 2,
+          directional: false
         }
-      })
-      gsap.to(".objectife_section", {
-        // yPercent: -100 * (sections.length - 1),
-        scrollTrigger: {
-          trigger: ".objectife_section",
-          start: "top bottom",
-          end:"bottom top",
-          scrub: 1,
-          snap: {
-            duration:{min:0.2,max:2},
-            ease: "power.in",
-            snapTo: 1/2,
-            directional: false
-          }
-          // end: () => "+=" + document.querySelector('.container').offsetWidth
-   
+        // end: () => "+=" + document.querySelector('.container').offsetWidth
+
+      }
+    })
+    gsap.to(".objectife_section", {
+      // yPercent: -100 * (sections.length - 1),
+      scrollTrigger: {
+        trigger: ".objectife_section",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+        snap: {
+          duration: { min: 0.2, max: 2 },
+          ease: "power.in",
+          snapTo: 1 / 2,
+          directional: false
         }
-      })
-   */
+        // end: () => "+=" + document.querySelector('.container').offsetWidth
+
+      }
+    })
+
 
     const robatoImgs = gsap.utils.toArray('.robato')
+    gsap.set(robatoImgs, { display: 'none' })
     const interval = setInterval(() => {
       const tl = gsap.timeline();
       tl.set(robatoImgs[i], { display: 'block' }).set(robatoImgs[i - 2], { display: 'none' })
@@ -75,7 +76,7 @@ const Index = () => {
       i++
     }, 41);
 
-  }, [loadimage])
+  }, [])
   return (
     <>
       {/* hero */}
@@ -102,11 +103,11 @@ const Index = () => {
         </div>
         {/* personal image */}
         {/*           <ReactP5Wrapper sketch={sketch} /> */}
-        <img src="../src/assets/robato/0002.webp" className='robato absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20  items-end' />
+        <img src={r1} className='robato absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]   z-20  items-end' />
 
         {
           imagesLIst?.map((item, index) => (
-            <img key={index} src={item} ref={(element) => robato.current[index] = element} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20 hidden items-end' />
+            <img key={index} src={item} ref={(element) => robato.current[index] = element} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%] scale-105  z-20 hidden items-end' />
 
           ))
         }
@@ -118,7 +119,7 @@ const Index = () => {
         <div className='absolute bottom-0 left-0 right-0 h-20 gradient3' />
         <div className="relative flex justify-center items-stretch flex-col gap-3 ">
           <Article icon={<FaWhatsapp size='2rem' fill='#3378a0' />} content={'0604932189'} href={'https://wa.me/0604932189'} />
-          <Article icon={<FaGithub size='2rem' fill='#3378a0' />} content={'jlsqfdjlksd'} />
+          <Article icon={<FaGithub size='2rem' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://wa.me/0604932189'} />
           <Article icon={<IoMail size='2rem' color='' fill='#3378a0' />} content='idriss4991@gmail.com' href={'mailto:idriss4991@gmail.com'} />
           <Article icon={<FaHome size='2rem' fill='#3378a0' />} content={'40070,marrakech morocco'} />
         </div>
