@@ -14,7 +14,7 @@ const Index = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const toCopy = useRef()
+  // const toCopy = useRef()
 
   const animate = useRef()
   useEffect(() => {
@@ -111,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* skills */}
-      <Skills refer={animate}/>
+      <Skills refer={animate} />
 
 
       <section className='h-96'></section>

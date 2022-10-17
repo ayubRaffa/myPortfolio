@@ -16,7 +16,7 @@ const Main = () => {
     useEffect(() => {
         const robatoImgs = gsap.utils.toArray('.robato')
         setTimeout(() => {
-            gsap.set(robatoImgs, { display: 'none' })
+            //  gsap.set(robatoImgs, { display: 'none' })
             const interval = setInterval(() => {
                 const tl = gsap.timeline();
                 tl.set(robatoImgs[i], { display: 'block' }).set(robatoImgs[i - 2], { display: 'none' })
@@ -25,7 +25,7 @@ const Main = () => {
                     clearInterval(interval)
                 }
                 i++
-            }, 41)
+            }, 50)
         }, 2000);
 
 
@@ -54,7 +54,7 @@ const Main = () => {
                 </div>
             </div>
             {/* personal image */}
-            <img src={r1} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]   z-20  ' />
+            <img src={r1} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-20  ' />
             {imagesLIst?.map((item, index) => (
                 <img key={index} src={item} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%] scale-105  z-20 hidden ' />
             ))}
