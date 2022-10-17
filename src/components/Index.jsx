@@ -8,24 +8,74 @@ import perso from '../assets/perso.png'
 import perso2 from '../assets/perso2.png'
 import { SkillsInfo } from './SkillsInfo';
 import Cta from './Cta';
-import wave from '../assets/wave.svg'
-import wave1 from '../assets/wave1.svg'
-import wave2 from '../assets/wave2.svg'
-import brush from '../assets/brush.jpg'
-import {ctx}  from './GsapAnimation'
+import { ctx } from './GsapAnimation'
+import { Timeline } from 'gsap/gsap-core';
 
-
+let imagesLIst = []
+const imgmodules = import.meta.glob('../assets/robato/*.webp')
+for (const path in imgmodules) {
+  imgmodules[path]().then((mod) => imagesLIst.push(mod.default))
+}
 
 const Index = () => {
+
+
+  gsap.registerPlugin(ScrollTrigger)
+
   const toCopy = useRef()
+  const robato = useRef([])
   const animate = useRef()
+  const [loadimage, setLoadimage] = useState(null)
+  let i =  1
   useEffect(() => {
-    ctx(animate)
-  }, [])
+    /*   ctx(animate)
+      gsap.to(".skills_section", {
+        // yPercent: -100 * (sections.length - 1),
+        ease: "power.in",
+        scrollTrigger: {
+          trigger: ".skills_section",
+          start: "400px bottom",
+          end: "bottom top",
+          scrub: 1,
+          snap: {
+            snapTo: 1 / 2,
+            directional: false
+          }
+          // end: () => "+=" + document.querySelector('.container').offsetWidth
+   
+        }
+      })
+      gsap.to(".objectife_section", {
+        // yPercent: -100 * (sections.length - 1),
+        scrollTrigger: {
+          trigger: ".objectife_section",
+          start: "top bottom",
+          end:"bottom top",
+          scrub: 1,
+          snap: {
+            duration:{min:0.2,max:2},
+            ease: "power.in",
+            snapTo: 1/2,
+            directional: false
+          }
+          // end: () => "+=" + document.querySelector('.container').offsetWidth
+   
+        }
+      })
+   */
 
+    const robatoImgs = gsap.utils.toArray('.robato')
+    const interval = setInterval(() => {
+      const tl = gsap.timeline();
+      tl.set(robatoImgs[i], { display: 'block' }).set(robatoImgs[i - 2], { display: 'none' })
 
+      if (i > imagesLIst.length - 1) {
+        clearInterval(interval)
+      }
+      i++
+    }, 41);
 
-
+  }, [loadimage])
   return (
     <>
       {/* hero */}
@@ -51,7 +101,16 @@ const Index = () => {
           </div>
         </div>
         {/* personal image */}
-        <img src={perso} alt="personal_image" className='absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20 ' />
+        {/*           <ReactP5Wrapper sketch={sketch} /> */}
+        <img src="../src/assets/robato/0002.webp" className='robato absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20  items-end' />
+
+        {
+          imagesLIst?.map((item, index) => (
+            <img key={index} src={item} ref={(element) => robato.current[index] = element} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  z-20 hidden items-end' />
+
+          ))
+        }
+
       </main >
 
       {/* Info */}
@@ -70,8 +129,8 @@ const Index = () => {
         <div className='absolute  -bottom-10 right-0 left-0 h-52  gradient3 pointer-events-none z-10 ' />
       </section >
 
-      {/*    */}
-      <section className="relative h-[150rem] bg-backgound2 overflow-visible bg-[url('../src/assets/pexel4.jpg')] bg-contain  bg-no-repeat bg-blend-color-dodge ">
+      {/*  objectife  */}
+      <section className="objectife_section relative  overflow-visible h-screen bg-backgound2  bg-[url('../src/assets/bbb.png')] bg-cover bg-top   bg-no-repeat bg-blend-overlay flex items-center justify-center">
         {/* second personal image */}
         {/* <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
@@ -80,12 +139,16 @@ const Index = () => {
             <strong className='text-4xl lg:text-6xl font-extrabold uppercase text-[#e0f400] font-header py-2 block'>best</strong>
           </h1>
         </div> */}
+        <div className='absolute -bottom-36 left-0 z-40 right-0 h-36 bg-blue-900' />
         <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24">
           <p className='absolute top-0 left-0 right-0 bottom-0  text-white blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
           </p>
           <p className='  text-2xl up text-center text-red-4'>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+
           </p>
         </div>
       </section>
@@ -113,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* skills */}
-      <section className="azer relative bg-backgound2 " ref={animate}>
+      <section className="skills_section azer relative bg-backgound2 " ref={animate}>
         <div className="relative mx-auto pb-[200px] border hexagon    ">
 
           {/* left hexagon */}
@@ -198,7 +261,6 @@ function IconImage({ src, classname, alt, text }) {
       opacity: 1,
       duration: .4,
       ease: "power.out",
-      yoyo: true
     })
   }, article)
   return (
