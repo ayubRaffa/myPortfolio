@@ -38,6 +38,7 @@ module.exports = {
       fontFamily: {
         text: ['Comfortaa', 'cursive'],
         header: ['Milonga', 'monospace'],
+        revalia: ['Revalia', 'cursive'],
       },
       
     },
