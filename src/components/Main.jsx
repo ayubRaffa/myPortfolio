@@ -40,21 +40,21 @@ const Main = () => {
             {/* headers */}
             <div className="relative  min-h-screen md:w-2/3 lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
                 <div className="flex flex-col justify-center  text-right md:text-left pb-28 ">
-                    <h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-pink-1 '>HI, it me! ayoub <br />
+                    <h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-blue-2 '>HI, it me! ayoub <br />
                         i make web sites, and other <pre>stuff &#x1F604;</pre>
                     </h1>
-                    <h2 className='text-2xl font-bold stroke-pink-2 lg:text-3xl'>
+                    <h2 className='text-2xl font-bold stroke-blue-1 lg:text-3xl'>
                         by the way, i am not a programmer !
                         im just someone who
                         loves
-                        <strong className=' block text-4xl font-extrabold uppercase text-pink-500 font-header py-2'  > coding</strong>
+                        <strong className=' block text-4xl font-extrabold uppercase text-blue-500 font-header py-2'  > coding</strong>
                     </h2>
                     {/* call to action button */}
                     <Cta />
                 </div>
             </div>
             {/* personal image */}
-            <img src={perso} className='robato absolute bottom-[-8rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-20  ' />
+            <img src={perso} className='robato absolute bottom-[-3rem] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-20  ' />
 
 
         </main >

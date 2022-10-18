@@ -41,22 +41,23 @@
 
 @layer utilities {
   .stroke-pink-1 {
-    @apply text-transparent;
-    -webkit-text-stroke: 2px #561171;
+
+    -webkit-text-stroke: 1px #561171;
   }
 
   .stroke-blue-1 {
-    @apply text-transparent;
-    -webkit-text-stroke: 2px #111b71;
+    -webkit-text-stroke: 1px #284e74;
   }
 
 
   .stroke-pink-2 {
-    -webkit-text-stroke: 1px #561171;
+    @apply text-transparent;
+    -webkit-text-stroke: 2px #561171;
   }
 
   .stroke-blue-2 {
-    -webkit-text-stroke: 1px #111b71;
+    @apply text-transparent;
+    -webkit-text-stroke: 2px #284e74;
   }
 
   .stroke-yellow {
