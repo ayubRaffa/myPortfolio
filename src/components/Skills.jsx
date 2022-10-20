@@ -49,12 +49,20 @@ export default Skills
 function IconImage({ src, classname, alt, text }) {
     const [article, setarticle] = useState(null)
 
-    const handleClick = (e) => {
-        setarticle(e);
+    const KillInfosection = () => {
+        gsap.fromTo(".popUpSkills", { scale: 1, opacity: 1 }, {
+            scale: 0,
+            translateY: "+=50px",
+            opacity: 0,
+            duration: .4,
+            ease: "power.out",
+            onComplete: () => setarticle(null)
+        })
+
     }
     useEffect(() => {
         if (article) {
-            gsap.fromTo(".popUp", { scale: 0, opacity: 0 }, {
+            gsap.to(".popUpSkills", {
                 scale: 1,
                 opacity: 1,
                 duration: .4,
@@ -64,13 +72,15 @@ function IconImage({ src, classname, alt, text }) {
     }, [article])
     return (
         <>
-            <img src={src} alt={alt} className={classname} onClick={() => handleClick(text)} />
+            <img src={src} alt={alt} className={classname} onClick={() => setarticle(text)} />
 
             {article &&
-                <div className='fixed top-0 left-0 right-0  bottom-0 z-[100]'>
-                    <div className="popUp flex  justify-center items-center w-full h-full">
-                        <div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96 bg-hero-tiny-checkers-blue-100 azer2 rounded-tl-full  rounded-bl-full">
-                            <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => handleClick(null)}><FaTimes color='white' size={'25px'} /></div>
+                <div className='fixed article  top-0 left-0 right-0  bottom-0 z-[1000]'>
+                    <div className="popUpSkills flex scale-0 opacity-0 justify-center items-center w-full h-full bg-background">
+                        <div className="relative flex justify-center items-center flex-col  w-full md:w-[calc(40rem+20vw)]  ">
+                            <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => KillInfosection()}>
+                                <FaTimes color='white' size={'25px'} />
+                            </div>
                             <div className="">
                                 <img src={src} alt="" className='w-fit scale-110 ' />
                             </div>

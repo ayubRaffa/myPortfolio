@@ -1,4 +1,3 @@
-import r1 from '../assets/robato/0001.webp';
 import React, { useEffect } from 'react'
 import Cta from './Cta';
 import gsap from 'gsap';
@@ -31,7 +30,7 @@ const Main = () => {
                 </div>
             </div>
             {/* personal image */}
-            <img src={perso} className='robato absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  ' />
+            <img src={perso} className='robito absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  ' />
 
 
         </main >
