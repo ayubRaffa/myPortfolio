@@ -54,10 +54,14 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 		})
 		const timeline = gsap.timeline({ defaults: { duration: .5 } })
 
-		timeline.fromTo(".robito", { opacity: 0, translateX: "+=100px" }, {
+		timeline.to(".mainText",{
+			opacity: 1,
+			duration: 1,
+			ease: "power3.in"
+		}).fromTo(".robito", { opacity: 0, translateX: "+=100px" }, {
 			translateX: '0',
 			opacity: 1,
-			delay: 1,
+			delay: .5,
 			onComplete: () => playRobito()
 		}).fromTo(".Designer", { opacity: 0, translateX: "-=100px" }, {
 			translateX: '0',
@@ -93,14 +97,14 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 		<div className="loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
 			< div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center ${ShowRobatoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 ">
-					<h1 className=' text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize font-revalia '>this is a UX/UI designer
+					<h1 className='mainText opacity-0 text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize font-revalia '>this is a UX/UI designer
 						<br />
 						& front/back-end web developer
 					</h1>
 					<h2 className='Designer opacity-0 text-2xl font-bold   lg:text-3xl italic '>
 						and a 3D designer
 					</h2>
-					<h2 className="letsDiveIN opacity-0 text-xl  w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2  hover:bg-background hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
+					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2  hover:bg-background hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
 				</div>
 				{/* personal image */}{/* 
          */}
