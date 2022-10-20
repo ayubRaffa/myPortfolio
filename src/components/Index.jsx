@@ -9,8 +9,25 @@ import Skills from './Skills';
 
 
 
-const Index = () => {
-
+const Index = ({ canLoadMainContent }) => {
+  useEffect(() => {
+    if (canLoadMainContent) {
+      const tl = gsap.timeline()
+      tl.to(".Main", {
+        scale: 1,
+        duration: 1,
+        ease: "power3.out",
+      }).to(".pinkBlur", {
+        opacity: .2,
+        duration: 2,
+        ease: "power.in",
+      }).to(".blueBlur", {
+        opacity: .2,
+        duration: 2,
+        ease: "power.in",
+      }, 3)
+    }
+  }, [canLoadMainContent])
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -53,8 +70,6 @@ const Index = () => {
       }
     })
 
-
-
   }, [])
   return (
     <>
@@ -65,7 +80,7 @@ const Index = () => {
       <Info />
 
       {/*  objectife  */}
-      <section className="objectife_section relative  overflow-visible h-screen bg-backgound2  bg-[url('../src/assets/bbb.png')] bg-cover bg-top   bg-no-repeat bg-blend-overlay flex items-center justify-center">
+      <section className="objectife_section relative  overflow-visible h-screen bg-background2  bg-[url('../src/assets/bbb.png')] bg-cover bg-top   bg-no-repeat bg-blend-overlay flex items-center justify-center">
         {/* second personal image */}
         {/* <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
@@ -90,7 +105,7 @@ const Index = () => {
 
 
 
-      <section className="relative h-[60vh] md:h-[90vh]  bg-backgound2 ">
+      <section className="relative h-[60vh] md:h-[90vh]  bg-background2 ">
         {/* <div className="absolute top-0  left-0 right-0 z-60">
           <img src={wave2} alt="wave" className='rotate-180'/>
         </div>
