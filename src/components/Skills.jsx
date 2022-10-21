@@ -12,25 +12,25 @@ const Skills = ({ refer }) => {
 
                 {/* left hexagon */}
                 <div className="left relative ">
-                    <IconImage src={SkillsInfo.node.src} alt={SkillsInfo.node.name} classname={'l z-20'} text={SkillsInfo.node.text} />
-                    <IconImage src={SkillsInfo.reactQuery.src} alt={SkillsInfo.node.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.reactQuery.text} />
-                    <IconImage src={SkillsInfo.php.src} alt={SkillsInfo.php.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.php.text} />
+                    <IconImage className={'l z-20'} skill={SkillsInfo.reactQuery} />
+                    <IconImage className={'tl absolute top-0 left-0'} skill={SkillsInfo.node} />
+                    <IconImage className={'bl absolute top-0 left-0'} skill={SkillsInfo.php} />
 
                 </div>
                 {/* center hexagon */}
                 <div className="centerr relative">
-                    <IconImage src={SkillsInfo.react.src} alt={SkillsInfo.react.name} classname={'c z-20'} text={SkillsInfo.react.text} />
-                    <IconImage src={SkillsInfo.jquery.src} alt={SkillsInfo.jquery.name} classname={'bl absolute top-0 left-0'} text={SkillsInfo.jquery.text} />
-                    <IconImage src={SkillsInfo.gsap.src} alt={SkillsInfo.gsap.name} classname={'br absolute top-0 left-0'} text={SkillsInfo.gsap.text} />
-                    <IconImage src={SkillsInfo.postgres.src} alt={SkillsInfo.postgres.name} classname={'tl absolute top-0 left-0'} text={SkillsInfo.postgres.text} />
-                    <IconImage src={SkillsInfo.typescript.src} alt={SkillsInfo.typescript.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.typescript.text} />
+                    <IconImage className={'c z-20'} skill={SkillsInfo.react} />
+                    <IconImage className={'bl absolute top-0 left-0'} skill={SkillsInfo.jquery} />
+                    <IconImage className={'br absolute top-0 left-0'} skill={SkillsInfo.gsap} />
+                    <IconImage className={'tl absolute top-0 left-0'} skill={SkillsInfo.postgres} />
+                    <IconImage className={'tr absolute top-0 left-0 '} skill={SkillsInfo.typescript} />
                 </div>
 
                 {/* rigth hexagon */}
                 <div className="right relative ">
-                    <IconImage src={SkillsInfo.tailwind.src} alt={SkillsInfo.tailwind.name} classname={'r z-20  '} text={SkillsInfo.tailwind.text} />
-                    <IconImage src={SkillsInfo.sass.src} alt={SkillsInfo.sass.name} classname={'br absolute top-0 left-0'} text={SkillsInfo.sass.text} />
-                    <IconImage src={SkillsInfo.git.src} alt={SkillsInfo.git.name} classname={'tr absolute top-0 left-0 '} text={SkillsInfo.git.text} />
+                    <IconImage className={'r z-20  '} skill={SkillsInfo.tailwind}/>
+                    <IconImage className={'br absolute top-0 left-0'} skill={SkillsInfo.sass}/>
+                    <IconImage className={'tr absolute top-0 left-0 '} skill={SkillsInfo.git}/>
 
                 </div>
 
@@ -46,7 +46,7 @@ export default Skills
 
 
 
-function IconImage({ src, classname, alt, text }) {
+function IconImage({ skill,className}) {
     const [article, setarticle] = useState(null)
 
     const KillInfosection = () => {
@@ -72,21 +72,21 @@ function IconImage({ src, classname, alt, text }) {
     }, [article])
     return (
         <>
-            <img src={src} alt={alt} className={classname} onClick={() => setarticle(text)} />
+            <img src={skill.src} alt={skill.alt} className={className}  onClick={() => setarticle(skill)} />
 
             {article &&
                 <div className='fixed article  top-0 left-0 right-0  bottom-0 z-[1000]'>
                     <div className="popUpSkills flex scale-0 opacity-0 justify-center items-center w-full h-full bg-background">
                         <div className="relative flex justify-center items-center flex-col  w-full md:w-[calc(40rem+20vw)]  ">
-                            <div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => KillInfosection()}>
+                            <div className='absolute -top-16 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => KillInfosection()}>
                                 <FaTimes color='white' size={'25px'} />
                             </div>
                             <div className="">
-                                <img src={src} alt="" className='w-fit scale-110 ' />
+                                <img src={skill.src} alt="" className='w-fit scale-110 ' />
                             </div>
                             <div className=" flex flex-col justify-center items-center gap-4">
-                                <h2 className='text-center text-3xl' >{alt}</h2>
-                                <p className='text-center text-xl' >{text}</p>
+                                <h2 className='text-center text-3xl' >{skill.alt}</h2>
+                                <p className='text-center text-xl' >{skill.text}</p>
                             </div>
                         </div>
                     </div>
