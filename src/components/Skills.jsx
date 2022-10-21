@@ -28,9 +28,9 @@ const Skills = ({ refer }) => {
 
                 {/* rigth hexagon */}
                 <div className="right relative ">
-                    <IconImage className={'r z-20  '} skill={SkillsInfo.tailwind}/>
-                    <IconImage className={'br absolute top-0 left-0'} skill={SkillsInfo.sass}/>
-                    <IconImage className={'tr absolute top-0 left-0 '} skill={SkillsInfo.git}/>
+                    <IconImage className={'r z-20  '} skill={SkillsInfo.tailwind} />
+                    <IconImage className={'br absolute top-0 left-0'} skill={SkillsInfo.sass} />
+                    <IconImage className={'tr absolute top-0 left-0 '} skill={SkillsInfo.git} />
 
                 </div>
 
@@ -46,7 +46,7 @@ export default Skills
 
 
 
-function IconImage({ skill,className}) {
+function IconImage({ skill, className }) {
     const [article, setarticle] = useState(null)
 
     const KillInfosection = () => {
@@ -72,7 +72,7 @@ function IconImage({ skill,className}) {
     }, [article])
     return (
         <>
-            <img src={skill.src} alt={skill.alt} className={className}  onClick={() => setarticle(skill)} />
+            <img src={skill.src} alt={skill.alt} className={className} onClick={() => setarticle(skill)} />
 
             {article &&
                 <div className='fixed article  top-0 left-0 right-0  bottom-0 z-[1000]'>
@@ -82,7 +82,7 @@ function IconImage({ skill,className}) {
                                 <FaTimes color='white' size={'25px'} />
                             </div>
                             <div className="">
-                                <img src={skill.src} alt="" className='w-fit scale-110 ' />
+                                <img src={skill.src} alt="" className='w-fit lg:scale-110 ' />
                             </div>
                             <div className=" flex flex-col justify-center items-center gap-4">
                                 <h2 className='text-center text-3xl' >{skill.alt}</h2>

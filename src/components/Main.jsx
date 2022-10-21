@@ -8,7 +8,7 @@ const Main = () => {
 
 
     return (
-        <main className="Main scale-125 relative min-h-screen mt-8 bg-[url('../src/assets/background.png')] bg-no-repeat bg-cover z-20" >
+        <main className="Main opacity-0 scale-125 relative min-h-screen mt-8 bg-[url('../src/assets/background.png')] bg-no-repeat bg-cover z-20" >
             {/* blured background */}
             <div className=" absolute rotate-180 lg:rotate-0 bottom-0 lg:top-0 right-0 w-full h-full md:h-2/3  lg:w-1/2 lg:h-[50rem] bg-[url('../src/assets/pexels6.webp')] md:bg-contain bg-cover   bg-no-repeat bg-blend-color-dodge bg-background" />
             < div className='pinkBlur absolute -z-0 -bottom-20 -right-20 h-2/3 w-[90vw] lg:w-[60vw] blur-[100px]  rounded-full bg-pink-500 opacity-0' />
@@ -23,14 +23,14 @@ const Main = () => {
                         by the way, i am not a programmer !
                         im just someone who
                         loves
-                        <strong className=' block text-4xl font-extrabold uppercase text-blue-500 font-header py-2'  > coding</strong>
+                        <strong className=' block text-4xl font-extrabold uppercase text-blue-500 stroke-blue-2 font-header py-2'  > coding</strong>
                     </h2>
                     {/* call to action button */}
                     <Cta />
                 </div>
             </div>
             {/* personal image */}
-            <img src={perso} className='robito absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  ' />
+            <img src={perso} className='perso absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  opacity-0 translate-x-10' />
 
 
         </main >

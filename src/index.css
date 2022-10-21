@@ -21,7 +21,7 @@
 
   svg {
     display: inline;
-    
+
   }
 
   p {
@@ -47,17 +47,17 @@
   }
 
   .stroke-blue-1 {
-    -webkit-text-stroke: 1px #284e74;
+    -webkit-text-stroke: 1px rgba(0, 128, 255, 0.456);
   }
 
 
   .stroke-pink-2 {
-    @apply text-transparent;
+    @apply text-background;
     -webkit-text-stroke: 1px #561171;
   }
 
   .stroke-blue-2 {
-    @apply text-transparent;
+    @apply text-background;
     -webkit-text-stroke: 1px #284e74;
   }
 

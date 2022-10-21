@@ -51,7 +51,6 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 
 		})
 		const timeline = gsap.timeline({ defaults: { duration: .5 } })
-
 		timeline.to(".mainText", {
 			opacity: 1,
 			duration: 1,
@@ -89,7 +88,7 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 			opacity: 0,
 			ease: "power.out",
 			display: "none",
-			onComplete: () => setcanLoadMainContent(true)
+			onComplete: () => setcanLoadMainContent(true),
 		}).to(".loading_Wrapper", {
 			display: "none",
 		})
