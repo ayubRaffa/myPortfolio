@@ -108,11 +108,11 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 					</h2>
 					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2  hover:bg-background hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
 				</div>
-				{/* personal image */}{/* 
+				{/* personalPicnal image */}{/* 
          */}
 
 				<div className="opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowrobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
-					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14  pointer-events-none  ' ></video>
+					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsinline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14  pointer-events-none  ' ></video>
 					{/* 		{imagesLIst?.map((item, index) => (
 						<img key={index} src={item} className='robito absolute  bottom-0 right-0 lg:right-[6vw] w-[24rem] hidden z-20' />
 					))} */}

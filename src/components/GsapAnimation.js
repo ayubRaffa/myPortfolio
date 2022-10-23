@@ -16,9 +16,9 @@ export const ctx = function (animate) {
             }
         }
     })
-    gsap.to(".objectife_section", {
+    gsap.to(".the goal_section", {
         scrollTrigger: {
-            trigger: ".objectife_section",
+            trigger: ".the goal_section",
             start: "center center",
             end: "200% bottom",
             // scrub: true,

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Cta from './Cta';
 import gsap from 'gsap';
-import perso from '../assets/perso.png'
+import personalPic from '../assets/personalPic.png'
 
 
 const Main = () => {
@@ -29,8 +29,8 @@ const Main = () => {
                     <Cta />
                 </div>
             </div>
-            {/* personal image */}
-            <img src={perso} className='perso absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  opacity-0 translate-x-10' />
+            {/* personalPicnal image */}
+            <img src={personalPic} className='personalPic absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  opacity-0 translate-x-10' />
 
 
         </main >

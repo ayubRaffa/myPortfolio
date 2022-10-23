@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Route, Routes } from 'react-router-dom';
 import './index.css'
 import Navbar from './components/Navbar';
 import Index from './Index';
 import Footer from './components/Footer';
-import gif from './assets/Infinity.gif'
 import CustomLoader from './components/CustomLoader';
-import gsap from 'gsap';
 
 const App = () => {
 

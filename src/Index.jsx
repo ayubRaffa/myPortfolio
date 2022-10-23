@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ctx } from './components/GsapAnimation'
-import perso2 from './assets/perso2.png'
 import Main from './components/Main';
 import Info from './components/Info';
 import Skills from './components/Skills';
@@ -19,7 +18,7 @@ const Index = ({ canLoadMainContent }) => {
         opacity: 1,
         duration: 1,
         ease: "power.out",
-      }).to(".perso", {
+      }).to(".personalPic", {
         translateX: "=2.5rem",
         opacity: 1,
         duration: 2,
@@ -50,13 +49,13 @@ const Index = ({ canLoadMainContent }) => {
       {/* Info */}
       <Info />
 
-      {/*  objectife  */}
-      <section className="objectife_section relative  overflow-visible h-screen bg-background2  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+      {/*  the goal section  */}
+      <section className="the goal_section relative  overflow-visible h-screen bg-background2  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
-          <video src={abstraction} autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+          <video src={abstraction} playsinline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
-        {/* second personal image */}
-        {/* <img src={perso2} alt="personal-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
+        {/* second personalPic image */}
+        {/* <img src={personalPic2} alt="personalPic-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
         <div className="flex justify-around items-start h-full">
           <h1 className='flex-1'> <strong></strong></h1>
           <h1 className='flex-1 py-10 text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-yellow'>i maybe just a beginner but i may become the
@@ -66,9 +65,7 @@ const Index = ({ canLoadMainContent }) => {
         <div className='absolute -bottom-36 left-0 z-40 right-0 h-36 bg-blue-900' />
       */}  <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
           {/*   <p className='absolute top-0 left-0 right-0 bottom-0  text-white blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
-          </p> */}
+            </p> */}
           <p className='  text-2xl up text-center text-red-4'>
             i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-pink-500 text-3xl '>best</strong>
           </p>
