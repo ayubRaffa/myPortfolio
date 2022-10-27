@@ -16,16 +16,14 @@ export const ctx = function (animate) {
             }
         }
     })
-    gsap.to(".the goal_section", {
+    gsap.to(".the quote_section", {
         scrollTrigger: {
-            trigger: ".the goal_section",
-            start: "center center",
-            end: "200% bottom",
+            trigger: ".quote_section",
             // scrub: true,
             snap: {
                 duration: { min: 0.2, max: 2 },
                 ease: "power.in",
-                snapTo: 1,
+                snapTo: 1 / 2,
                 directional: false
             }
         }

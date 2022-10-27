@@ -6,7 +6,7 @@ import { FaTimes, FaGreaterThan } from 'react-icons/fa';
 
 
 
-const CustomLoader = ({ setcanLoadMainContent }) => {
+const CustomLoader = ({ setCanLoadMainContent }) => {
 	const [showrobitoInfo, setshowrobitoInfo] = useState(false)
 
 	const robitoRef = useRef()
@@ -88,7 +88,7 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
 			opacity: 0,
 			ease: "power.out",
 			display: "none",
-			onComplete: () => setcanLoadMainContent(true),
+			onComplete: () => setCanLoadMainContent(true),
 		}).to(".loading_Wrapper", {
 			display: "none",
 		})
@@ -112,7 +112,7 @@ const CustomLoader = ({ setcanLoadMainContent }) => {
          */}
 
 				<div className="opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowrobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
-					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsinline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14  pointer-events-none  ' ></video>
+					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14  pointer-events-none  ' ></video>
 					{/* 		{imagesLIst?.map((item, index) => (
 						<img key={index} src={item} className='robito absolute  bottom-0 right-0 lg:right-[6vw] w-[24rem] hidden z-20' />
 					))} */}

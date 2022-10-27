@@ -9,7 +9,17 @@ module.exports = {
     extend: {
       colors: {
         background: "#0d1117",
-        background2: "#0d1119",
+        background2: {
+          100: "#cfcfd1",
+          200: "#9ea0a3",
+          300: "#6e7075",
+          400: "#3d4147",
+          500: "#0d1119",
+          600: "#0a0e14",
+          700: "#080a0f",
+          800: "#05070a",
+          900: "#030305"
+        },
         navbar: "#161b22",
         tab: "#24292e",
         pink: {
@@ -39,6 +49,8 @@ module.exports = {
         text: ['Revalia', 'cursive'],
         header: ['Milonga', 'monospace'],
         revalia: ['Revalia', 'cursive'],
+        alcantera: ['alcantera', 'cursive'],
+        PlayfairDisplayediumItalic: ['PlayfairDisplayediumItalic', 'cursive'],
       },
 
     },

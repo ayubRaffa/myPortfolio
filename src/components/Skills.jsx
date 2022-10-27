@@ -7,7 +7,7 @@ import { SkillsInfo } from './SkillsInfo';
 
 const Skills = ({ refer }) => {
     return (
-        <section className="skills_section azer relative bg-background2 " ref={refer}>
+        <section className="skills_section gradient_layer relative bg-background-500 " ref={refer}>
             <div className="relative mx-auto pb-[200px] border hexagon    ">
 
                 {/* left hexagon */}
@@ -34,7 +34,7 @@ const Skills = ({ refer }) => {
 
                 </div>
 
-                <div className='buttom absolute -top-1 -bottom-1 -right-1 -left-1 bg-gradient-to-r from-background2 to-background2  via-transparent pointer-events-none' />
+                <div className='buttom absolute -top-1 -bottom-1 -right-1 -left-1 bg-gradient-to-r from-background-500 to-background-500  via-transparent pointer-events-none' />
                 <h2 className='skill absolute w-full   lg:px-[20%] text-center  top-5  text-2xl opacity-0 '>my set of skills so far</h2>
                 <p className='skill absolute w-full   lg:px-[20%] text-center top-5  text-lg opacity-0 '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illum, officiis itaque sequi suscipit consectetur qui facilis aliquid quasi saepe maxime ullam alias accusamus numquam quae odit fuga porro enim.</p>
             </div>

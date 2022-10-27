@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+
+@font-face {
+  font-family: alcantera;
+  src: url('AlcanteraSerif-gx4jp.ttf');
+}
+@font-face {
+  font-family: PlayfairDisplayediumItalic;
+  src: url('PlayfairDisplayMediumItalic-8MaEg.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,7 +35,7 @@
   }
 
   p {
-    @apply font-bold font-text
+    @apply  font-text
   }
 
   span {
@@ -41,6 +51,7 @@
 }
 
 @layer utilities {
+
   .stroke-pink-1 {
 
     -webkit-text-stroke: 1px #561171;
@@ -78,7 +89,7 @@
 
   .gradient3 {
     /* 23273F */
-    @apply bg-gradient-to-t from-background2
+    @apply bg-gradient-to-t from-background
     /*  background: linear-gradient(to top, #0d1117 0.39%, #410d5520 99.68%);*/
   }
 
@@ -161,7 +172,7 @@
 
 
 
-.azer::after {
+.gradient_layer::after {
   pointer-events: none;
   user-select: none;
   content: '';
@@ -173,7 +184,7 @@
   background: linear-gradient(45deg, #410d5500 40%, #410d555a);
 }
 
-.azer2::before {
+.gradient_layer2::before {
   pointer-events: none;
   color: #0d1355;
   user-select: none;

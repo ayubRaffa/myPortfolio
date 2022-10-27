@@ -5,13 +5,14 @@ import { ctx } from './components/GsapAnimation'
 import Main from './components/Main';
 import Info from './components/Info';
 import Skills from './components/Skills';
-import abstraction from './assets/0000-0500k.webm';
+import abstractionk from './assets/0000-0500c.webm';
+import abstraction from './assets/0000-0500.webm';
 
 
 
-const Index = ({ canLoadMainContent }) => {
+const Index = ({ CanLoadMainContent }) => {
   useEffect(() => {
-    if (canLoadMainContent) {
+    if (CanLoadMainContent) {
       const tl = gsap.timeline()
       tl.to(".Main", {
         scale: 1,
@@ -33,7 +34,7 @@ const Index = ({ canLoadMainContent }) => {
         ease: "power.in",
       }, 3)
     }
-  }, [canLoadMainContent])
+  }, [CanLoadMainContent])
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -43,57 +44,101 @@ const Index = ({ canLoadMainContent }) => {
   }, [])
   return (
     <>
-      {/* hero */}
+      {/* //* hero section */}
       <Main />
 
-      {/* Info */}
+      {/* //* Info section */}
       <Info />
 
-      {/*  the goal section  */}
-      <section className="the goal_section relative  overflow-visible h-screen bg-background2  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+
+      {/* //* the quote section  */}
+      <section className="the quote_section relative  overflow-visible min-h-screen bg-background-500  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
-          <video src={abstraction} playsinline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+          <video src={abstraction} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
-        {/* second personalPic image */}
-        {/* <img src={personalPic2} alt="personalPic-image-2" className='absolute -bottom-[calc(8rem-5%)] md:-bottom-[8rem]  -left-[12rem]  w-[calc(35rem+5vw)] z-20 saturate-80' />
-        <div className="flex justify-around items-start h-full">
-          <h1 className='flex-1'> <strong></strong></h1>
-          <h1 className='flex-1 py-10 text-5xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-yellow'>i maybe just a beginner but i may become the
-            <strong className='text-4xl lg:text-6xl font-extrabold uppercase text-[#e0f400] font-header py-2 block'>best</strong>
-          </h1>
-        </div> 
-        <div className='absolute -bottom-36 left-0 z-40 right-0 h-36 bg-blue-900' />
-      */}  <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-          {/*   <p className='absolute top-0 left-0 right-0 bottom-0  text-white blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
-            </p> */}
+        <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+          <blockquote className=' capitalize font-extrabold  text-center font-PlayfairDisplayediumItalic'>
+            <span className='block whitespace-pre  pr-20 text-4xl text-gray-400 tracking-wider'>progression...</span>
+            <span className='block whitespace-pre pl-20 text-4xl text-gray-400 tracking-wider '>not perfection !</span>
+          </blockquote>
+        </div>
+      </section>
+
+
+      {/* //* my goals section */}
+      <section className="relative min-h-screen   w-full">
+        <div className=" flex justify-center items-center flex-col gap-20 ">
+          <div className="relative   md:px-[calc(1rem+5vw)] max-w-[1000Px] w-full">
+            <div className='  h-[65px] md:h-[120px]'>
+              <div className="font-header text-[88px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>my objectife</pre></div>
+            </div>
+            <div className='-translate-y-[100%]  h-[65px] md:h-[120px]'>
+              <div className="font-header text-[88px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>my objectife</pre></div>
+            </div>
+            <p className=' text-2xl text-center  '>
+              seeking a job opportunity that will allow me to use, my skills i have learned so far, personality and organizational skills in an entry-level position as a front-end, back-end, or fullstack web developer where i can contribute my skills and obtain mentorship
+            </p>
+          </div>
+          <div className="scale-95 hover:scale-x-105 hover:scale-y-110 transition-scale  duration-700 rounded-3xl shadow-lg shadow-background2-600 border-background2-300 m-3 bg-background2-500 py-4 relative text-gray-200 px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-4 items-center">
+            <p className=' text-sm md:text-md  font-light'>
+              fueled by high energy levels and boundless enthusiasm, i'm easily inspired and mire then willing to follow my fascinations wherever they take me. i'm passionate, expressive multi-talented spirit with a natural ability to entertain and inspire. i never satisfied with what i have of knowledge, instead i have an almost impulsive need to learn more .
+              i enjoy always learning technologies and staying up-to-date on current trends in web design.
+            </p>
+            <p className=' text-sm md:text-md  font-light'>
+              with a strong emphasis on "progressive enhancement", i look for creative ways to push the boundaries of website front-end code without compromising on browser support and performance by combining the
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* //* the quote section  */}
+      <section className=" quote_section relative   min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+        <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
+          <video src={abstraction} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+        </div>
+        <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
           <p className='  text-2xl up text-center text-red-4'>
-            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-pink-500 text-3xl '>best</strong>
+            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-[#1d369b] text-3xl '>best</strong>
           </p>
         </div>
       </section>
 
 
 
-      <section className="relative h-screen bg-background2 ">
-        {/* <div className="absolute top-0  left-0 right-0 z-60">
-          <img src={wave2} alt="wave" className='rotate-180'/>
-        </div>
-         <div className="absolute top-0  left-0 right-0 z-10">
-       <img src={wave1} alt="wave" className='rotate-180'/>
-        </div>  */}
-
+      {/* //* my  section */}
+      <section className="relative min-h-screen bg-background-500">
         <div className="flex justify-center items-center h-full">
-          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px]">
-            {/* <p className='absolute top-0 left-0 right-0 bottom-0  text-black blur-sm  px-[calc(1rem+5vw)] text-2xl up text-center'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
-            </p> */}
-            <p className='  text-2xl up text-center  text-red-4'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam atque omnis ex in explicabo expedita soluta sit officiis doloribus cumque, pariatur aperiam error quam, dolore inventore magni eius dignissimos amet!
+          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
+            <p className=' text-lg md:text-2xl up text-center  '>
+              fueled by high energy levels and boundless enthusiasm, i'm easily inspired and mire then willing to follow my fascinations wherever they take me. i'm passionate, expressive multi-talented spirit with a natural ability to entertain and inspire. i never satisfied with what i have of knowledge, instead i have an almost impulsive need to learn more .
+              i enjoy always learning technologies and staying up-to-date on current trends in web design.
+            </p>
+            <p className='  text-2xl up text-center  '>
+              with a strong emphasis on "progressive enhancement", i look for creative ways to push the boundaries of website front-end code without compromising on browser support and performance by combining the
             </p>
           </div>
-
         </div>
       </section>
+
+      {/* //* the quote section  */}
+      <section className="the quote_section relative  overflow-visible h-screen bg-background-500  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+        <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
+          <video src={abstractionk} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+        </div>
+        <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+          <p className='  text-3xl up text-center font-PlayfairDisplayediumItalic font-extralight text-gray-400 tracking-wide'>
+            combining the art of 3D design with my programming skills <br />is what interest me in web development
+          </p>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
 
       {/* skills */}
       <Skills refer={animate} />
