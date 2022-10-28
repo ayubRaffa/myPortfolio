@@ -52,7 +52,7 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       {/* //* the quote section  */}
-      <section className="the quote_section relative  overflow-visible min-h-screen bg-background-500  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+      <section className="quote_section relative  overflow-visible min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
           <video src={abstraction} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
@@ -66,20 +66,16 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       {/* //* my goals section */}
-      <section className="relative min-h-screen   w-full">
+      <section className="  relative min-h-screen   w-full">
         <div className=" flex justify-center items-center flex-col gap-20 ">
           <div className="relative   md:px-[calc(1rem+5vw)] max-w-[1000Px] w-full">
-            <div className='  h-[65px] md:h-[120px]'>
-              <div className="font-header text-[88px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>my objectife</pre></div>
-            </div>
-            <div className='-translate-y-[100%]  h-[65px] md:h-[120px]'>
-              <div className="font-header text-[88px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>my objectife</pre></div>
-            </div>
-            <p className=' text-2xl text-center  '>
+            <div className="h-[65px] md:h-[120px] font-header text-[88px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>my objective</pre></div>
+            <div className="-translate-y-[100%]  h-[65px] md:h-[120px] font-header text-[88px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>my objective</pre></div>
+            <p className=' text-2xl text-center  text-blue-500 '>
               seeking a job opportunity that will allow me to use, my skills i have learned so far, personality and organizational skills in an entry-level position as a front-end, back-end, or fullstack web developer where i can contribute my skills and obtain mentorship
             </p>
           </div>
-          <div className="scale-95 hover:scale-x-105 hover:scale-y-110 transition-scale  duration-700 rounded-3xl shadow-lg shadow-background2-600 border-background2-300 m-3 bg-background2-500 py-4 relative text-gray-200 px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-4 items-center">
+          <div className="scale-95 hover:scale-x-105 hover:scale-y-110 transition-scale  duration-700 rounded-3xl shadow-lg shadow-background2-600 border-background2-300 m-3  py-4 relative text-blue-100 px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-4 items-center">
             <p className=' text-sm md:text-md  font-light'>
               fueled by high energy levels and boundless enthusiasm, i'm easily inspired and mire then willing to follow my fascinations wherever they take me. i'm passionate, expressive multi-talented spirit with a natural ability to entertain and inspire. i never satisfied with what i have of knowledge, instead i have an almost impulsive need to learn more .
               i enjoy always learning technologies and staying up-to-date on current trends in web design.
@@ -106,7 +102,7 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       {/* //* my  section */}
-      <section className="relative min-h-screen bg-background-500">
+      <section className="relative min-h-screen ">
         <div className="flex justify-center items-center h-full">
           <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
             <p className=' text-lg md:text-2xl up text-center  '>
@@ -121,7 +117,7 @@ const Index = ({ CanLoadMainContent }) => {
       </section>
 
       {/* //* the quote section  */}
-      <section className="the quote_section relative  overflow-visible h-screen bg-background-500  bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+      <section className="the quote_section relative  overflow-visible h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
           <video src={abstractionk} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
@@ -134,6 +130,34 @@ const Index = ({ CanLoadMainContent }) => {
 
 
 
+      {/* //* my  section */}
+      <section className="relative min-h-screen ">
+        <div className="flex justify-center items-center h-full">
+          <div className="relative w-full px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
+            <div className='  h-[65px] md:h-[120px]'>
+              <div className="font-header text-[68px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>so why me?</pre></div>
+            </div>
+            <div className='-translate-y-[100%]  h-[65px] md:h-[120px]'>
+              <div className="font-header text-[68px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>so why me?</pre></div>
+            </div>
+            <h1 className="uppercase text-center font-PlayfairDisplayediumItalic">because i am by nature a team player.</h1>
+            <ol className='list-disc pl-5 flex flex-col gap-4'>
+              <li>
+                <p className="">i enjoy working with a team that share me the same enthusiasm and join me in the journey of creativity and invention!</p>
+              </li>
+              <li>
+                <p className="">i am a dynamic web developer seeking new challenges to put my skills under the test, and grow as a professional. <br />
+                  iam such a person who can deliver creative solutions to complex project in a fast pace environment</p>
+              </li>
+              <li>
+                <p className="">with my creative problem solving and ability to work under pressure, i know i can contribute to your team in the best may possible</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
 
 
 
@@ -144,7 +168,7 @@ const Index = ({ CanLoadMainContent }) => {
       <Skills refer={animate} />
 
 
-      <section className='h-96'></section>
+      <section className="h-screen  "></section>
     </ >
   )
 }

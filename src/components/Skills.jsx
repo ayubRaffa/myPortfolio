@@ -8,7 +8,7 @@ import { SkillsInfo } from './SkillsInfo';
 const Skills = ({ refer }) => {
     return (
         <section className="skills_section gradient_layer relative bg-background-500 " ref={refer}>
-            <div className="relative mx-auto pb-[200px] border hexagon    ">
+            <div className="relative mx-auto pb-[200px] border-t border-b hexagon    ">
 
                 {/* left hexagon */}
                 <div className="left relative ">

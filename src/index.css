@@ -89,7 +89,7 @@
 
   .gradient3 {
     /* 23273F */
-    @apply bg-gradient-to-t from-background
+    @apply bg-gradient-to-t from-background2-500
     /*  background: linear-gradient(to top, #0d1117 0.39%, #410d5520 99.68%);*/
   }
 

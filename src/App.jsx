@@ -34,7 +34,7 @@ const App = () => {
     <>
       {/*   <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
       {CanLoadMainContent &&
-        <div className="App transition-colors duration-1000  max-w-screen min-h-screen bg-background overflow-hidden">
+        <div className="App transition-colors duration-1000  max-w-screen min-h-screen bg-background2-500 overflow-hidden">
           <Navbar />
           <Routes>
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
