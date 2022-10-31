@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ctx } from './components/GsapAnimation'
 import Main from './components/Main';
-import Info from './components/Info';
 import Skills from './components/Skills';
 import sphereAnime from './assets/sphereAnime.webm';
 import sphereAnimeCycle from './assets/sphereAnimeCycle.webm';
@@ -28,10 +27,6 @@ const Index = ({ CanLoadMainContent }) => {
     <>
       {/* //* hero section */}
       <Main CanLoadMainContent={CanLoadMainContent} />
-
-      {/* //* Info section */}
-      <Info />
-
 
       {/* //* the quote section  */}
       <section className="  relative  overflow-visible min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
@@ -73,15 +68,16 @@ const Index = ({ CanLoadMainContent }) => {
 
       {/* //* the quote section  */}
       <section className="aaaa  relative min-h-screen bg-no-repeat bg-cover flex items-center justify-center">
-        <div className="absolute mix-blend-lighten translate-x-0 z-50 top-0 right-0 left-0 bottom-0 flex justify-center items-center pointer-events-none">
+        <div className="absolute mix-blend-screen translate-x-0 z-50 top-0 right-0 left-0 bottom-0 flex justify-center items-center pointer-events-none">
           <img src={blueWaves} alt="sphere" className='max-w-md ' />
         </div>
         <div className="absolute mix-blend-color-dodge translate-x-0 scale-125  top-0 right-0 left-0 bottom-0 flex justify-center items-center pointer-events-none">
           <img src={blueWaves} alt="sphere" className='max-w-md ' />
         </div>
-        <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+        <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+          <div className='z-10 mix-blend-darken -translate-x-16 rotate-[38deg] absolute top-0 bottom-0 left-0 right-0 bg-red-900' />
           <p className='  text-3xl  text-center  font-PlayfairDisplayediumItalic '>
-            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-pink-100 text-4xl font-PlayfairDisplayediumItalic mt-3'>best</strong>
+            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-white text-4xl font-PlayfairDisplayediumItalic '>best</strong>
           </p>
         </div>
       </section>
@@ -104,6 +100,7 @@ const Index = ({ CanLoadMainContent }) => {
         <div className='absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[calc(80vw+80vh)]  w-[calc(15rem+5vw)] origin-center  rotate-45 lg:rotate-[77deg] bg-[#2f4d7a] opacity-100 rounded-full  mix-blend-darken blur-3xl ' />
       </section>
 
+
       {/* //* the quote section  */}
       <section className=" relative   h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
@@ -111,7 +108,7 @@ const Index = ({ CanLoadMainContent }) => {
         </div>
         <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
           <p className='  text-3xl up text-center font-PlayfairDisplayediumItalic font-extralight  tracking-wide '>
-            combining the art of 3D design with my programming skills is what interest me in web development
+            combining the art of design with my programming skills is what interest me in front-end development
           </p>
         </div>
       </section>
@@ -123,23 +120,23 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       <section className="snapToskillssection h-fit min-h-screen  ">
-        <div className="flex flex-col py-6 ">
+        <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
           <div className=" flex justify-center ">
             <video ref={iconsAnimationRef} src={iconsAnimation} muted playsInline className='translate-y-11 mix-blend-lighten'></video>
           </div>
-          <div className=" flex flex-col items-center justify-star gap-3">
-            <h1 className='-translate-y-11 text-xl'>this is some of the techniques i learned so far </h1>
-            <p className='px-6 text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, perferendis optio rem incidunt deleniti, pariatur voluptatem delectus ex consequatur sequi eaque, cumque adipisci commodi est ipsam maxime amet ipsum repudiandae.</p>
+          <h1 className='skillsh1 opacity-0 translate-y-0 text-xl max-w-[16rem] text-center'>this is some of the techniques i learned so far </h1>
+          <div className=" flex flex-col md:m-[calc(2rem+3vw)] gap-3">
+            <p className=' text-'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, perferendis optio rem incidunt deleniti, pariatur voluptatem delectus ex consequatur sequi eaque, cumque adipisci commodi est ipsam maxime amet ipsum repudiandae.</p>
             <p className=''>allow me to perform a numerous tasks as such:</p>
-            <ul className='px-24  list-disc'>
-              <li>build mock designs and wireframes for landing pages using <FaFigma color='#F55' /> FIGMA, <DiPhotoshop color='#F55' /> PHOTOSHOP, and <SiBlender color='#F55' /> <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='underline'>BLENDER</a> </li>
-              <li>Utilizing all of <FaHtml5 color='#F55' /> HTML, <FaCss3 color='#F55' /> CSS and <FaJs color='#F55' /> JAVASCRIPT to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
-              <li>Developing applications usign <FaReact color='#F55' /> REACTJS while while managing the state through REACT-QUERY</li>
-              <li>Using <FaGit color='#F55' /> locally to track, regulate, and revise the code changes. </li>
-              <li>Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web using RegEx, if no dedicated apis is available</li>
-              <li>Create a server side application with <FaPhp color='#F55' /> PHP or <FaNodeJs color='#F55' /> NODEJS to interact with databases and apis by performing the CRUD functions</li>
-              <li>design an integrated sql database using MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
-              ...
+            <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
+              <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' /> FIGMA, <DiPhotoshop color='#F55' /> PHOTOSHOP, and <SiBlender color='#F55' /> <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='underline'>BLENDER</a> </li>
+              <li >Utilizing all of <FaHtml5 color='#F55' /> HTML, <FaCss3 color='#F55' /> CSS and <FaJs color='#F55' /> JAVASCRIPT to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
+              <li >Developing applications usign <FaReact color='#F55' /> REACTJS while while managing the state through REACT-QUERY</li>
+              <li >Using <FaGit color='#F55' /> locally to track, regulate, and revise the code changes. </li>
+              <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web using RegEx, if no dedicated apis is available</li>
+              <li >Create a server side application with <FaPhp color='#F55' /> PHP or <FaNodeJs color='#F55' /> NODEJS to interact with databases and apis by performing the CRUD functions</li>
+              <li >design an integrated sql database using MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+              <li>...</li>
             </ul>
           </div>
         </div>
@@ -158,7 +155,7 @@ const Index = ({ CanLoadMainContent }) => {
               <h1 className="whitespace-pre font-header text-[4.5rem] md:text-[calc(4.5rem+3vw)] text-transparent  stroke-blue-1  text-center">so why me?</h1>
             </div>
             <h1 className="uppercase text-center font-PlayfairDisplayediumItalic">because i am a team player by nature .</h1>
-            <ol className='list-disc pl-5 flex flex-col gap-4 '>
+            <ol className='list-disc px-[calc(1rem+5vw)] flex flex-col gap-4 '>
               <li>
                 <p className="">i enjoy working with a team that share me the same enthusiasm and join me in the journey of creativity and invention!</p>
               </li>

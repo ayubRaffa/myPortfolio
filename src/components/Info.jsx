@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaGithub, FaHome, FaWhatsapp, FaCopy, FaStar,  } from 'react-icons/fa';
+import { FaGithub, FaHome, FaWhatsapp, FaCopy, FaStar, } from 'react-icons/fa';
 import { IoMail, } from 'react-icons/io5'
 
 
@@ -18,7 +18,7 @@ const Info = () => {
                 <div className='w-[1px] gradient' />
                 <div className="basis-0 flex-[1]">
                     <div className=" relative flex flex-col gap-3 py-4 justify-start max-w-sm">
-                        <h3 className='text-xl uppercase'>ayoub raffiai <pre> idrissi <span>28 yrs</span></pre></h3>
+                        <h3 className='text-xl uppercase'>ayoub raffiai <pre> idrissi <span className='lowercase'>28 yrs</span></pre></h3>
                         <h4 className='font-extrabold'><span>2020 - 2022 : </span> Private higher education training in Multimedia Development. <br /> graduated in 2022 </h4>
                         <div className="lang">
                             <div className="grid grid-cols-3 gap-1">

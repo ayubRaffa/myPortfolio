@@ -22,14 +22,19 @@
     @apply text-white;
   }
 
-  ul{
-    @apply max-w-[900px]
+  ul {
+    @apply max-w-[700px]
   }
+
+  pre {
+    font-family: inherit;
+  }
+
   h1,
   h2,
   h3,
   h4 {
-    @apply font-header max-w-[1080px] 
+    @apply font-header max-w-[700px]
   }
 
   svg {
@@ -38,7 +43,7 @@
   }
 
   p {
-    @apply font-text max-w-[1080px]
+    @apply font-text max-w-[700px]
   }
 
   span {
@@ -54,7 +59,7 @@
 }
 
 @layer utilities {
-  
+
 
   .stroke-pink-1 {
 

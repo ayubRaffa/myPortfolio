@@ -96,7 +96,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 
 
 	return (
-		<div className="loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
+		<div className=" loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
 			< div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center ${showrobitoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 ">
 					<h1 className='mainText opacity-0 text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize font-revalia '>this is a UX/UI designer

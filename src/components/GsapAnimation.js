@@ -28,13 +28,14 @@ export const ctx = function (animate, iconsAnimationRef) {
     });
     ScrollTrigger.create({
         trigger: ".snapToskillssection",
-        start:"top center ",
-      /*   snap: {
-            snapTo: 1,
-            directional: false,
-            ease: "power.in"
-        }, */
+        start: "top 70% ",
+        /*   snap: {
+              snapTo: 1,
+              directional: false,
+              ease: "power.in"
+          }, */
         onEnter: () => {
+            gsap.to('.skillsh1', { opacity: 1, y: '-1rem',delay:6,duration:2 })
             console.count();
             iconsAnimationRef.current.currentTime = 0
             iconsAnimationRef.current.play()
