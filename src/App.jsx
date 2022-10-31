@@ -15,11 +15,9 @@ const App = () => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".App",
-          pin: false,
           start: "center bottom",
           end: "+=1500",
-          scrub: 3,
-          pinSpacing: true,
+          scrub: true,
           toggleActions: "play pause resume reset",
         }
       });
@@ -40,7 +38,7 @@ const App = () => {
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
             <Route path='/aboutMe' element={<Index />} ></Route>
           </Routes>
-          <Footer />
+         {/*  <Footer /> */}
         </div >
       }
     </>

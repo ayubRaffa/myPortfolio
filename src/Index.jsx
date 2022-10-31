@@ -5,56 +5,38 @@ import { ctx } from './components/GsapAnimation'
 import Main from './components/Main';
 import Info from './components/Info';
 import Skills from './components/Skills';
-import abstractionk from './assets/0000-0500c.webm';
-import abstraction from './assets/0000-0500.webm';
-
-
+import sphereAnime from './assets/sphereAnime.webm';
+import sphereAnimeCycle from './assets/sphereAnimeCycle.webm';
+import blueWaves from './assets/blueWaves.jpg';
+import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact } from 'react-icons/fa';
+import { SiBlender } from 'react-icons/si';
+import { DiPhotoshop } from 'react-icons/di';
+import iconsAnimation from './assets/iconsAnime.webm';
+import iconsAnimationMobile from './assets/iconsAnimeMobile.webm';
 
 const Index = ({ CanLoadMainContent }) => {
-  useEffect(() => {
-    if (CanLoadMainContent) {
-      const tl = gsap.timeline()
-      tl.to(".Main", {
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        ease: "power.out",
-      }).to(".personalPic", {
-        translateX: "=2.5rem",
-        opacity: 1,
-        duration: 2,
-        ease: "power.out"
-      }).to(".pinkBlur", {
-        opacity: .2,
-        duration: 2,
-        ease: "power.in",
-      }).to(".blueBlur", {
-        opacity: .2,
-        duration: 2,
-        ease: "power.in",
-      }, 3)
-    }
-  }, [CanLoadMainContent])
 
-  gsap.registerPlugin(ScrollTrigger)
 
+
+  const iconsAnimationRef = useRef()
   const animate = useRef()
   useEffect(() => {
-    ctx(animate)
+    gsap.registerPlugin(ScrollTrigger)
+    ctx(animate, iconsAnimationRef)
   }, [])
   return (
     <>
       {/* //* hero section */}
-      <Main />
+      <Main CanLoadMainContent={CanLoadMainContent} />
 
       {/* //* Info section */}
       <Info />
 
 
       {/* //* the quote section  */}
-      <section className="quote_section relative  overflow-visible min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+      <section className="  relative  overflow-visible min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
-          <video src={abstraction} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+          <video src={sphereAnime} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
         <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
           <blockquote className=' capitalize font-extrabold  text-center font-PlayfairDisplayediumItalic'>
@@ -66,35 +48,40 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       {/* //* my goals section */}
-      <section className="  relative min-h-screen   w-full">
-        <div className=" flex justify-center items-center flex-col gap-20 ">
-          <div className="relative   md:px-[calc(1rem+5vw)] max-w-[1000Px] w-full">
-            <div className="h-[65px] md:h-[120px] font-header text-[88px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>my objective</pre></div>
-            <div className="-translate-y-[100%]  h-[65px] md:h-[120px] font-header text-[88px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>my objective</pre></div>
-            <p className=' text-2xl text-center  text-blue-500 '>
-              seeking a job opportunity that will allow me to use, my skills i have learned so far, personality and organizational skills in an entry-level position as a front-end, back-end, or fullstack web developer where i can contribute my skills and obtain mentorship
-            </p>
+      <section className="snapTogoalsection  relative min-h-screen   w-full">
+        <div className=" flex justify-center items-center flex-col ">
+          <div className="md:px-[calc(1rem+5vw)] max-w-[1000Px] w-full">
+            <h1 className="whitespace-pre translate-y-5 relative font-header text-[4.5rem] md:text-[calc(4.5rem+3vw)]  text-transparent  stroke-blue-1  text-center">
+              my objective
+              <h1 className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[4.5rem] md:text-[calc(4.5rem+3vw)]  text-transparent stroke-blue-1 blur-lg text-center">
+                my objective
+              </h1>
+            </h1>
           </div>
-          <div className="scale-95 hover:scale-x-105 hover:scale-y-110 transition-scale  duration-700 rounded-3xl shadow-lg shadow-background2-600 border-background2-300 m-3  py-4 relative text-blue-100 px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-4 items-center">
-            <p className=' text-sm md:text-md  font-light'>
-              fueled by high energy levels and boundless enthusiasm, i'm easily inspired and mire then willing to follow my fascinations wherever they take me. i'm passionate, expressive multi-talented spirit with a natural ability to entertain and inspire. i never satisfied with what i have of knowledge, instead i have an almost impulsive need to learn more .
-              i enjoy always learning technologies and staying up-to-date on current trends in web design.
+          <div className="border py-20 relative rounded-3xl  m-3 text-blue-100 px-6 md:px-[calc(1rem+2vw)] max-w-[1000Px] grid grid-cols-2 gap-y-6 gap-x-4 items-start">
+            <p className='col-span-2 text-xl md:text-2xl text-left  text-blue-100'>
+              seeking a job opportunity that will allow me to use, my skills i have learned so far, personality and organizational skills in an entry-level position as a front/back-end web developer where i can contribute my skills and obtain mentorship
             </p>
-            <p className=' text-sm md:text-md  font-light'>
-              with a strong emphasis on "progressive enhancement", i look for creative ways to push the boundaries of website front-end code without compromising on browser support and performance by combining the
+            <p className=' text-base md:text-lg text-blue-200 font-light break-words'>
+              The opportunity to constantly learn, share knowledge, and be challenged is why I am drawn to web development as a career choice.  </p>
+            <p className=' text-base md:text-lg text-blue-200 font-light'>
+              create the best user interface on the market is something i have in my TO-DO list
             </p>
           </div>
         </div>
       </section>
 
       {/* //* the quote section  */}
-      <section className=" quote_section relative   min-h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
-        <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
-          <video src={abstraction} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+      <section className="aaaa  relative min-h-screen bg-no-repeat bg-cover flex items-center justify-center">
+        <div className="absolute mix-blend-lighten translate-x-0 z-50 top-0 right-0 left-0 bottom-0 flex justify-center items-center pointer-events-none">
+          <img src={blueWaves} alt="sphere" className='max-w-md ' />
+        </div>
+        <div className="absolute mix-blend-color-dodge translate-x-0 scale-125  top-0 right-0 left-0 bottom-0 flex justify-center items-center pointer-events-none">
+          <img src={blueWaves} alt="sphere" className='max-w-md ' />
         </div>
         <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-          <p className='  text-2xl up text-center text-red-4'>
-            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-[#1d369b] text-3xl '>best</strong>
+          <p className='  text-3xl  text-center  font-PlayfairDisplayediumItalic '>
+            i may be only a beginner with litter experience, <br /> but i may become the <strong className='block uppercase text-pink-100 text-4xl font-PlayfairDisplayediumItalic mt-3'>best</strong>
           </p>
         </div>
       </section>
@@ -102,46 +89,76 @@ const Index = ({ CanLoadMainContent }) => {
 
 
       {/* //* my  section */}
-      <section className="relative min-h-screen ">
-        <div className="flex justify-center items-center h-full">
-          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
-            <p className=' text-lg md:text-2xl up text-center  '>
+      <section className="relative  flex justify-center items-center  min-h-screen ">
+        <div className="">
+          <div className="mx-2 border  rounded-2xl py-10 px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
+            <p className=' text-lg md:text-2xl text-blue-100 text-left   first-line:text-3xl'>
               fueled by high energy levels and boundless enthusiasm, i'm easily inspired and mire then willing to follow my fascinations wherever they take me. i'm passionate, expressive multi-talented spirit with a natural ability to entertain and inspire. i never satisfied with what i have of knowledge, instead i have an almost impulsive need to learn more .
               i enjoy always learning technologies and staying up-to-date on current trends in web design.
             </p>
-            <p className='  text-2xl up text-center  '>
+            <p className='  text-2xl text-blue-100 text-left  '>
               with a strong emphasis on "progressive enhancement", i look for creative ways to push the boundaries of website front-end code without compromising on browser support and performance by combining the
             </p>
           </div>
         </div>
+        <div className='absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[calc(80vw+80vh)]  w-[calc(15rem+5vw)] origin-center  rotate-45 lg:rotate-[77deg] bg-[#2f4d7a] opacity-100 rounded-full  mix-blend-darken blur-3xl ' />
       </section>
 
       {/* //* the quote section  */}
-      <section className="the quote_section relative  overflow-visible h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
+      <section className=" relative   h-screen   bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center">
         <div className="absolute top-0 right-0 left-0 bottom-0  flex justify-center items-center pointer-events-none">
-          <video src={abstractionk} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+          <video src={sphereAnimeCycle} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
         </div>
         <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-          <p className='  text-3xl up text-center font-PlayfairDisplayediumItalic font-extralight text-gray-400 tracking-wide'>
-            combining the art of 3D design with my programming skills <br />is what interest me in web development
+          <p className='  text-3xl up text-center font-PlayfairDisplayediumItalic font-extralight  tracking-wide '>
+            combining the art of 3D design with my programming skills is what interest me in web development
           </p>
         </div>
       </section>
 
 
 
+      {/* skills */}
+      {/*  <Skills refer={animate} /> */}
+
+
+      <section className="snapToskillssection h-fit min-h-screen  ">
+        <div className="flex flex-col py-6 ">
+          <div className=" flex justify-center ">
+            <video ref={iconsAnimationRef} src={iconsAnimation} muted playsInline className='translate-y-11 mix-blend-lighten'></video>
+          </div>
+          <div className=" flex flex-col items-center justify-star gap-3">
+            <h1 className='-translate-y-11 text-xl'>this is some of the techniques i learned so far </h1>
+            <p className='px-6 text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, perferendis optio rem incidunt deleniti, pariatur voluptatem delectus ex consequatur sequi eaque, cumque adipisci commodi est ipsam maxime amet ipsum repudiandae.</p>
+            <p className=''>allow me to perform a numerous tasks as such:</p>
+            <ul className='px-24  list-disc'>
+              <li>build mock designs and wireframes for landing pages using <FaFigma color='#F55' /> FIGMA, <DiPhotoshop color='#F55' /> PHOTOSHOP, and <SiBlender color='#F55' /> <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='underline'>BLENDER</a> </li>
+              <li>Utilizing all of <FaHtml5 color='#F55' /> HTML, <FaCss3 color='#F55' /> CSS and <FaJs color='#F55' /> JAVASCRIPT to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
+              <li>Developing applications usign <FaReact color='#F55' /> REACTJS while while managing the state through REACT-QUERY</li>
+              <li>Using <FaGit color='#F55' /> locally to track, regulate, and revise the code changes. </li>
+              <li>Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web using RegEx, if no dedicated apis is available</li>
+              <li>Create a server side application with <FaPhp color='#F55' /> PHP or <FaNodeJs color='#F55' /> NODEJS to interact with databases and apis by performing the CRUD functions</li>
+              <li>design an integrated sql database using MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+              ...
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* //* my  section */}
-      <section className="relative min-h-screen ">
-        <div className="flex justify-center items-center h-full">
+      <section className=" min-h-screen flex justify-center items-center">
+        <div className="  h-full">
           <div className="relative w-full px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
             <div className='  h-[65px] md:h-[120px]'>
-              <div className="font-header text-[68px] md:text-[158px] text-transparent stroke-blue-1 blur-lg text-center"><pre>so why me?</pre></div>
+              <h1 className="whitespace-pre font-header text-[4.5rem] md:text-[calc(4.5rem+3vw)] text-transparent stroke-blue-1 blur-lg text-center">so why me?</h1>
             </div>
             <div className='-translate-y-[100%]  h-[65px] md:h-[120px]'>
-              <div className="font-header text-[68px] md:text-[158px] text-transparent  stroke-blue-1  text-center"><pre>so why me?</pre></div>
+              <h1 className="whitespace-pre font-header text-[4.5rem] md:text-[calc(4.5rem+3vw)] text-transparent  stroke-blue-1  text-center">so why me?</h1>
             </div>
-            <h1 className="uppercase text-center font-PlayfairDisplayediumItalic">because i am by nature a team player.</h1>
-            <ol className='list-disc pl-5 flex flex-col gap-4'>
+            <h1 className="uppercase text-center font-PlayfairDisplayediumItalic">because i am a team player by nature .</h1>
+            <ol className='list-disc pl-5 flex flex-col gap-4 '>
               <li>
                 <p className="">i enjoy working with a team that share me the same enthusiasm and join me in the journey of creativity and invention!</p>
               </li>
@@ -150,25 +167,13 @@ const Index = ({ CanLoadMainContent }) => {
                   iam such a person who can deliver creative solutions to complex project in a fast pace environment</p>
               </li>
               <li>
-                <p className="">with my creative problem solving and ability to work under pressure, i know i can contribute to your team in the best may possible</p>
+                <p className="">with my creative problem solving and ability to work under pressure, i know i can contribute to the team in the best may possible</p>
               </li>
             </ol>
           </div>
         </div>
       </section>
 
-
-
-
-
-
-
-
-      {/* skills */}
-      <Skills refer={animate} />
-
-
-      <section className="h-screen  "></section>
     </ >
   )
 }

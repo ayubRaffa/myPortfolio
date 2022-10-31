@@ -4,11 +4,12 @@
 
 @font-face {
   font-family: alcantera;
-  src: url('AlcanteraSerif-gx4jp.ttf');
+  src: url('./assets/AlcanteraSerif-gx4jp.ttf');
 }
+
 @font-face {
   font-family: PlayfairDisplayediumItalic;
-  src: url('PlayfairDisplayMediumItalic-8MaEg.ttf');
+  src: url('./assets/PlayfairDisplayMediumItalic-8MaEg.ttf');
 }
 
 @tailwind base;
@@ -21,12 +22,14 @@
     @apply text-white;
   }
 
-  pre,
+  ul{
+    @apply max-w-[900px]
+  }
   h1,
   h2,
   h3,
   h4 {
-    @apply font-header
+    @apply font-header max-w-[1080px] 
   }
 
   svg {
@@ -35,7 +38,7 @@
   }
 
   p {
-    @apply  font-text
+    @apply font-text max-w-[1080px]
   }
 
   span {
@@ -51,6 +54,7 @@
 }
 
 @layer utilities {
+  
 
   .stroke-pink-1 {
 
