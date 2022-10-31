@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap';
 import robito from '../assets/0000-0132_robito.webm'
 import robitoImg from '../assets/robito.png'
-import { FaTimes, FaGreaterThan } from 'react-icons/fa';
+import { FaTimes, FaGreaterThan,FaSmileBeam,FaSmileWink, FaLaugh } from 'react-icons/fa';
 
 
 
@@ -96,7 +96,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 
 
 	return (
-		<div className=" loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
+		<div className="bg-[url('./assets/ac.png')] saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
 			< div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center ${showrobitoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 ">
 					<h1 className='mainText opacity-0 text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize font-revalia '>this is a UX/UI designer
@@ -156,7 +156,7 @@ function RobitoInfo({ setshowrobitoInfo, showrobitoInfo }) {
 						</div>
 						<div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center gap-4">
 							<h2 className='text-center text-3xl' >Robito</h2>
-							<p className='text-center text-xl' >this is a module i have found in the internet and i have modified and animate it in blender software for my portfolio</p>
+							<p className='text-center text-xl' >this is a module i found in the internet and i have modified and animate in blender software for my portfolio. <br />hope you live it <FaSmileWink/></p>
 						</div>
 					</div>
 				</div>

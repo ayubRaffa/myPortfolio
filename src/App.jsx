@@ -9,7 +9,7 @@ import gsap from "gsap";
 
 const App = () => {
 
-  const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
+  const [CanLoadMainContent, setCanLoadMainContent] = useState(false);
   useEffect(() => {
     if (CanLoadMainContent) {
       let tl = gsap.timeline({
@@ -30,15 +30,15 @@ const App = () => {
 
   return (
     <>
-      {/*   <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
+      <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />
       {CanLoadMainContent &&
-        <div className="App bg-[url('./assets/a.jpg')] bg-blend-color-dodge bg-no-repeat bg-contain bg-bottom transition-colors duration-1000  max-w-screen min-h-screen bg-background2-500 overflow-hidden">
+        <div className="App max-w-screen min-h-screen bg-background2-500 overflow-hidden">
           <Navbar />
           <Routes>
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
             <Route path='/aboutMe' element={<Index />} ></Route>
           </Routes>
-         {/*  <Footer /> */}
+          {/*  <Footer /> */}
         </div >
       }
     </>
