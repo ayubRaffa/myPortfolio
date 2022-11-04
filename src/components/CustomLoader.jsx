@@ -65,7 +65,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 		}).fromTo(".Designer", { opacity: 0, translateX: "-=100px" }, {
 			translateX: '0',
 			opacity: 1,
-			ease: "power.out",
+			ease: "power3z.out",
 			duration: 2,
 			delay: .5,
 		}).fromTo(".letsDiveIN", { opacity: 0 }, {

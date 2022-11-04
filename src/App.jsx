@@ -9,7 +9,7 @@ import gsap from "gsap";
 
 const App = () => {
 
-  const [CanLoadMainContent, setCanLoadMainContent] = useState(false);
+  const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
   useEffect(() => {
     if (CanLoadMainContent) {
       let tl = gsap.timeline({
@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <>
-      <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />
+   {/*    <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
       {CanLoadMainContent &&
         <div className="App max-w-screen min-h-screen bg-background2-500 overflow-hidden">
           <Navbar />

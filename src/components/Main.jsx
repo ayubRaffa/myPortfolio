@@ -15,12 +15,16 @@ const Main = ({ CanLoadMainContent }) => {
                 opacity: 1,
                 duration: 1,
                 ease: "power.out",
+            }).to('.title',{
+                opacity:1,
+                scale:1,
+                duration:1,
             }).to(".personalPic", {
                 translateX: "=2.5rem",
                 opacity: 1,
                 duration: 2,
                 ease: "power.out"
-            }).to(".pinkBlur", {
+            },1.4).to(".pinkBlur", {
                 opacity: .3,
                 duration: 2,
                 ease: "power.in",
@@ -41,7 +45,7 @@ const Main = ({ CanLoadMainContent }) => {
                 <div className='pinkBlur absolute -bottom-20 -right-20 h-2/3 w-[90vw] lg:w-[60vw] blur-[100px]  rounded-full bg-pink-500 mix-blend-color opacity-0 -z-10' />
                 <div className='blueBlur absolute -top-20 -left-20 h-2/3 right-1/3 blur-[100px]  rounded-full bg-blue-500 mix-blend-color opacity-0 -z-10' />
                 {/* headers */}
-                <div className="relative  min-h-screen md:w-2/3 lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
+                <div className="title opacity-0 scale-110 relative  min-h-screen md:w-2/3 lg:w-1/2  px-4 md:ml-6 flex flex-col  justify-center items-start">
                     <div className="flex flex-col justify-center  text-right md:text-left pb-28 gap-5">
                         <h1 className=' text-6xl lg:text-5xl xl:text-6xl font-extrabold capitalize stroke-blue-2 font-alcantera'>HI, it me! ayoub <br />
                             i make web sites, and other <pre className='font-header'>stuff &#x1F604;</pre>

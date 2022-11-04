@@ -19,7 +19,7 @@ export const ctx = function (animate, iconsAnimationRef) {
     })  */
     ScrollTrigger.create({
         /* trigger: ".snapTogoalsection",
-        snap: {
+        snap: {q
             snapTo: 1 ,
             directional: false,
             ease: "power.in"
