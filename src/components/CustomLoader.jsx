@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap';
 import robito from '../assets/0000-0132_robito.webm'
 import robitoImg from '../assets/robito.png'
-import { FaTimes, FaGreaterThan,FaSmileBeam,FaSmileWink, FaLaugh } from 'react-icons/fa';
+import { FaTimes, FaGreaterThan, FaSmileBeam, FaSmileWink, FaLaugh } from 'react-icons/fa';
 
 
 
@@ -62,12 +62,12 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			ease: "power.out",
 			delay: .5,
 			onComplete: () => playRobito()
-		}).fromTo(".Designer", { opacity: 0, translateX: "-=100px" }, {
+		}).fromTo(".enthusiast", { opacity: 0, translateX: "-=100px" }, {
 			translateX: '0',
 			opacity: 1,
 			ease: "power3z.out",
 			duration: 2,
-			delay: .5,
+			delay: .8,
 		}).fromTo(".letsDiveIN", { opacity: 0 }, {
 			opacity: 1,
 			delay: 2,
@@ -88,7 +88,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			opacity: 0,
 			ease: "power.out",
 			display: "none",
-			onComplete: () => setCanLoadMainContent(true),
+			onStart: () => setCanLoadMainContent(true),
 		}).to(".loading_Wrapper", {
 			display: "none",
 		})
@@ -103,8 +103,8 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 						<br />
 						& front/back-end web developer.
 					</h1>
-					<h2 className='Designer opacity-0 text-2xl font-bold   lg:text-3xl italic '>
-						and a 3D designer
+					<h2 className='enthusiast opacity-0 text-2xl font-bold   lg:text-3xl italic '>
+						and a 3D enthusiast
 					</h2>
 					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2  hover:bg-background hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
 				</div>
@@ -156,7 +156,7 @@ function RobitoInfo({ setshowrobitoInfo, showrobitoInfo }) {
 						</div>
 						<div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center gap-4">
 							<h2 className='text-center text-3xl' >Robito</h2>
-							<p className='text-center text-xl' >this is a module i found in the internet and i have modified and animate in blender software for my portfolio. <br />hope you live it <FaSmileWink/></p>
+							<p className='text-center text-xl' >this is a module i found in the internet and i have modified and animate in blender software for my portfolio. <br />hope you like it <FaSmileWink /></p>
 						</div>
 					</div>
 				</div>

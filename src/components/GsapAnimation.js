@@ -36,7 +36,7 @@ export const ctx = function (animate, iconsAnimationRef) {
           }, */
         onEnter: () => {
             gsap.to('.skillsh1', { opacity: 1, y: '-1rem',delay:6,duration:2 })
-            console.count();
+      
             iconsAnimationRef.current.currentTime = 0
             iconsAnimationRef.current.play()
         }

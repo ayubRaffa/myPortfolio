@@ -6,9 +6,10 @@ import { IoMail, } from 'react-icons/io5'
 const Info = () => {
     return (
 
-        <section section className="  min-h-[500px] " > {/* rounded-tl-[100px] rounded-tr-[100px] */}
-            <div className="relative flex justify-center items-stretch md:gap-6 lg:gap-10 px-1 lg:px-6 py-20 pb-40 gap-3  gradient_layer  bg-hero-cutout-pink-100 z-10 ">
-                < div className='absolute bottom-0 left-0 right-0 h-20 gradient3' />
+        <section section className="bg-background2-500  min-h-[500px] " > {/* rounded-tl-[100px] rounded-tr-[100px] */}
+            <div className="relative flex justify-center items-stretch md:gap-6 lg:gap-10 px-1 lg:px-6 py-20 pb-40 gap-3   bg-hero-cutout-pink-100 z-10 ">
+                <div className='absolute top-0 right-0 left-0 bottom-0 linear-gradient ' />
+                < div className=' absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[color:var(--color-bg)] to-transparent' />
                 <div className="basis-0 flex-[1] relative flex justify-center items-end flex-col gap-3 ">
                     <Article icon={<FaWhatsapp size='2rem' fill='#3378a0' />} content={'0604932189'} href={'https://wa.me/0604932189'} />
                     <Article icon={<FaGithub size='2rem' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://wa.me/0604932189'} />
@@ -30,7 +31,7 @@ const Info = () => {
                         </div>
                     </div>
                 </div>
-                <div className='absolute  -bottom-10 right-0 left-0 h-52  gradient3 pointer-events-none z-10 ' />
+                {/*   <div className='absolute  -bottom-10 right-0 left-0 h-52  gradient3 pointer-events-none z-10 ' /> */}
             </div>
         </section >
     )

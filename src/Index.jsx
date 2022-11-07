@@ -129,12 +129,12 @@ const Index = ({ CanLoadMainContent }) => {
 
       <section className="snapToskillssection h-fit min-h-screen  ">
         <div className=" flex justify-center ">
-          <video muted playsInline className='translate-y-11 mix-blend-lighten md:hidden'  >
-            <source ref={iconsAnimationRef} src={iconsAnimationMobile} media='(min-width:799px)' type='video/webm' />
-          </video>
-          <video ref={iconsAnimationRef} muted playsInline className='translate-y-11 mix-blend-lighten hidden md:block'  >
+          <video ref={iconsAnimationRef} muted autoPlay playsInline className='translate-y-11 mix-blend-lighten '  >
             <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
           </video>
+          {/*  <video ref={iconsAnimationRef} muted playsInline className='translate-y-11 mix-blend-lighten hidden md:block'  >
+            <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
+          </video> */}
         </div>
         <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
           <h1 className='skillsh1 opacity-0 translate-y-0 text-xl max-w-[16rem] text-center'>this is some of the techniques i learned so far </h1>
@@ -185,12 +185,7 @@ const Index = ({ CanLoadMainContent }) => {
       </section>
 
 
-      <section className='thatsAll  h-[200vh] border  overflow-hidden'>
-        <div className="thatsAlldiv top-0 left-0 w-screen h-screen border ">
-        </div>
-      </section>
 
-      <section className='h-[1500px]'></section>
 
     </ >
   )
