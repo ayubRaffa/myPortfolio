@@ -10,7 +10,6 @@ export const ctx = function (animate, iconsAnimationRef) {
             start: "400px bottom",
             end: "bottom top",
             scrub: 1,
-            markers:true,
             snap: {
                 snapTo: 1 / 2,
                 directional: false
@@ -47,7 +46,6 @@ export const ctx = function (animate, iconsAnimationRef) {
     /*    gsap.to(".snapTosection", {
            scrollTrigger: {
                trigger: ".snapBisection",
-               markers:false,
                // scrub: true,
                snap: {
                    duration: { min: 0.2, max: 2 },

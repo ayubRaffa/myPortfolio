@@ -68,7 +68,7 @@ const Index = ({ CanLoadMainContent }) => {
             <p className=' text-base md:text-lg text-blue-200 font-light break-words'>
               The opportunity to constantly learn, share knowledge, and be challenged is why I am drawn to web development as a career choice.  </p>
             <p className=' text-base md:text-lg text-blue-200 font-light'>
-              create the best user interface on the market is something i have in my TO-DO list
+              create the best user interface on the market is something i have in my <pre className='inline'>TO-DO list</pre>
             </p>
           </div>
         </div>

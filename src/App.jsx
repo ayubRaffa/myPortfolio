@@ -25,7 +25,6 @@ const App = () => {
         scrollTrigger: {
           trigger: ".App",
           start: "30% center",
-          markers: true,
           end: "65% center",
           scrub: true,
           onEnter: () => { document.body.style.setProperty('--color-bg', getColor()); },
