@@ -1,6 +1,6 @@
 
 /** @type {import('tailwindcss').Config} */
-module.exports  = {
+module.exports = {
   darkMode: '',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -8,8 +8,7 @@ module.exports  = {
   theme: {
     extend: {
       colors: {
-        background: "#0d1117",
-        background2: {
+        background: {
           100: "#cfcfd1",
           200: "#9ea0a3",
           300: "#6e7075",
@@ -22,31 +21,9 @@ module.exports  = {
         },
         navbar: "#161b22",
         tab: "#24292e",
-        pink: {
-          100: "#ddcfe3",
-          200: "#bba0c6",
-          300: "#9a70aa",
-          400: "#78418d",
-          500: "#561171",
-          600: "#450e5a",
-          700: "#340a44",
-          800: "#22072d",
-          900: "#110317"
-        },
-        blue: {
-          100: "#d4dce3",
-          200: "#a9b8c7",
-          300: "#7e95ac",
-          400: "#537190",
-          500: "#284e74",
-          600: "#203e5d",
-          700: "#182f46",
-          800: "#101f2e",
-          900: "#081017"
-        },
+        pink: "#561171",
       },
       fontFamily: {
-        text: ['Revalia', 'cursive'],
         header: ['Milonga', 'monospace'],
         revalia: ['Revalia', 'cursive'],
         alcantera: ['alcantera', 'cursive'],
@@ -64,7 +41,7 @@ module.exports  = {
       // the list of patterns you want to generate a class for
       // the names must be in kebab-case
       // an empty array will generate all 87 patterns
-      patterns: ["cutout", "tiny-checkers", "formal-invitation"],
+      patterns: ["cutout"],
 
       // The foreground colors of the pattern
       colors: {

@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap ');*/
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap&family=Revalia&display=swap');
 
 @font-face {
   font-family: alcantera;
@@ -48,7 +47,7 @@
   }
 
   p {
-    @apply font-text max-w-[700px]
+    @apply font-revalia max-w-[700px]
   }
 
   span {
@@ -70,86 +69,23 @@
 
 @layer utilities {
 
-  /*   .bg{
-    background-color: var(--color-bg);
-  } */
   .linear-gradient {
-    background: linear-gradient(45deg, var(--color-bg) 40%, #410d555c);
+    background: linear-gradient(45deg, var(--color-bg) 40%, #410d5551);
 
-  }
-
-
-  .stroke-pink-1 {
-    -webkit-text-stroke: 1px #561171;
   }
 
   .stroke-blue-1 {
     -webkit-text-stroke: 1px rgba(0, 128, 255, 0.456);
   }
 
-
-  .stroke-pink-2 {
-    @apply text-background;
-    -webkit-text-stroke: 1px #561171;
-  }
-
   .stroke-blue-2 {
-    @apply text-background;
+    @apply text-transparent;
     -webkit-text-stroke: 1px #284e74;
   }
 
-  .stroke-yellow {
-    @apply text-transparent;
-    -webkit-text-stroke: 1px #e0f400;
-  }
-
-  
-
   .gradient {
-    /* 23273F */
-    background: linear-gradient(90.44deg, #410d55 .39%, #536976 70.68%);
+    background: linear-gradient(90.44deg, #240530 .39%, #30434fda 70.68%);
   }
-
-  .gradient2 {
-    /* 23273F */
-    background: linear-gradient(90.44deg, #410d5550 0.39%, #410d5520 99.68%);
-  }
-
-  .gradient3 {
-    /* 23273F */
-    @apply bg-gradient-to-t from-background2-500
-    /*  background: linear-gradient(to top, #0d1117 0.39%, #410d5520 99.68%);*/
-  }
-
-  .hexagon {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 200px));
-    place-content: center;
-  }
-
-  .hexagon img {
-    transition: all .3s ease;
-    filter: contrast(100%)
-  }
-
-  .hexagon img:hover,
-  .hexagon img:focus {
-    filter: contrast(150%)
-  }
-
-  /* 
-  .popUp{
-    animation: popUp 1S ease 0S 1;
-  }
-  @keyframes popUp {
-    from{
-      scale: 0%;
-    }
-    to{
-      scale:100%;
-    }
-  }
- */
 }
 
 
@@ -170,44 +106,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-/* :root {
-  color: #fff;
-  font-family: "fira code";
-} */
-
-/* div {
-  scrollbar-width: none;
-} */
-
-/* .Index {
-  background-image: './src/assets/personalPic.png';
-} */
-
-
-
-/* svg {
-  display: inline;
-} */
-
-
-
-.gradient_layer::after {
-  pointer-events: none;
-  user-select: none;
-  content: '';
-  position: absolute;
-  bottom: 0%;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(45deg, #410d5500 40%, #410d555a);
-}
+}*/

@@ -12,18 +12,20 @@ const App = () => {
   const App = useRef()
   const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
   useEffect(() => {
-    const bgColors = ['#080a0f', '#0a0e14', '#030305', '#090b19', '#080a10']
+    const bgColors = ['#080a0f', '#080a10', '#0a0e14', '#030305', '#06070f']
     const linkColors = ['#c7f9dc', '#f2f9c7', '#f9cec7', '#f9bcf1', '#bcecf9']
 
-    let randomBgColor
-    function getbgColor() {
-      let initialColor = randomBgColor || "#0d1119"
-      randomBgColor = bgColors[Math.floor(Math.random() * bgColors.length)]
-      if (randomBgColor === initialColor) { getbgColor() }
-      return randomBgColor
+    let randomColor, iteratingColor, i = 0, j = 0
+    function getBackgroundColor() {
+      iteratingColor = bgColors[i]
+      if (i === bgColors.length - 1) j = 1; else if (i === 0) j = 0
+      if (j === 1) i--; else i++
+      return iteratingColor
     }
     function getLinkColor() {
-      return linkColors[Math.floor(Math.random() * bgColors.length)]
+      const Color = linkColors[Math.floor(Math.random() * linkColors.length)]
+      if (Color === randomColor) getLinkColor()
+      return Color
     }
     if (CanLoadMainContent) {
       gsap.timeline({
@@ -33,15 +35,19 @@ const App = () => {
           end: "60% center",
           scrub: true,
           onEnter: () => {
-            document.body.style.setProperty('--color-bg', getbgColor());
+            document.body.style.setProperty('--color-bg', getBackgroundColor());
             document.body.style.setProperty('--color-link', getLinkColor())
           },
           onLeave: () => {
-            document.body.style.setProperty('--color-bg', getbgColor());
+            document.body.style.setProperty('--color-bg', getBackgroundColor());
             //    document.body.style.setProperty('--color-link', getLinkColor())
           },
           onEnterBack: () => {
-            document.body.style.setProperty('--color-bg', getbgColor());
+            document.body.style.setProperty('--color-bg', getBackgroundColor());
+            //  document.body.style.setProperty('--color-link', getLinkColor())
+          },
+          onLeaveBack: () => {
+            document.body.style.setProperty('--color-bg', getBackgroundColor());
             //  document.body.style.setProperty('--color-link', getLinkColor())
           },
         }
@@ -53,9 +59,9 @@ const App = () => {
 
   return (
     <>
-      {/*  <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
+       <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> 
       {CanLoadMainContent &&
-        <div ref={App} className="App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-hidden">
+        <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-hidden">
           <Navbar />
           <Routes>
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>

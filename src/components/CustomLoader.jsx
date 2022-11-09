@@ -2,12 +2,13 @@ import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap';
 import robito from '../assets/0000-0132_robito.webm'
 import robitoImg from '../assets/robito.png'
-import { FaTimes, FaGreaterThan, FaSmileBeam, FaSmileWink, FaLaugh } from 'react-icons/fa';
+import ac from '../assets/ac.png'
+import { FaTimes, FaGreaterThan, FaSmileWink } from 'react-icons/fa';
 
 
 
 const CustomLoader = ({ setCanLoadMainContent }) => {
-	const [showrobitoInfo, setshowrobitoInfo] = useState(false)
+	const [showRobitoInfo, setshowRobitoInfo] = useState(false)
 
 	const robitoRef = useRef()
 	let canrobitoHovered = false
@@ -87,38 +88,35 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			scale: 1.4,
 			opacity: 0,
 			ease: "power.out",
-			display: "none",
 			onStart: () => setCanLoadMainContent(true),
-		}).to(".loading_Wrapper", {
-			display: "none",
+			onComplete: () => gsap.to(".loading_Wrapper", {
+				opacity: 0,
+				duration: 1,
+				display: "none",
+			})
 		})
 	}
 
 
 	return (
-		<div className="bg-[url('./assets/ac.png')] saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover loading_Wrapper  fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background ">
-			< div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center ${showrobitoInfo && " blur-xl pointer-events-none"}`} >
-				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 ">
-					<h1 className='mainText opacity-0 text-4xl lg:text-5xl xl:text-6xl font-extrabold capitalize font-revalia '>this is a UX/UI designer
+		<div className='loading_Wrapper saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})`}}>
+			<div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
+				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer" onClick={diveInClick}>
+					<h1 className='text-4xl font-extrabold capitalize opacity-0 mainText lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
 						<br />
 						& front/back-end web developer.
 					</h1>
-					<h2 className='enthusiast opacity-0 text-2xl font-bold   lg:text-3xl italic '>
+					<h2 className='text-2xl italic font-bold opacity-0 enthusiast lg:text-3xl '>
 						and a 3D enthusiast
 					</h2>
-					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2  hover:bg-background hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
+					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2 hover:bg-background-500 hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
 				</div>
-				{/* personalPicnal image */}{/* 
-         */}
 
-				<div className="opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowrobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
-					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14  pointer-events-none  ' ></video>
-					{/* 		{imagesLIst?.map((item, index) => (
-						<img key={index} src={item} className='robito absolute  bottom-0 right-0 lg:right-[6vw] w-[24rem] hidden z-20' />
-					))} */}
+				<div className="opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowRobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
+					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14 pointer-events-none' ></video>
 				</div>
 			</div>
-			{showrobitoInfo && <RobitoInfo setshowrobitoInfo={setshowrobitoInfo} showrobitoInfo={showrobitoInfo} />}
+			{showRobitoInfo && <RobitoInfo setshowRobitoInfo={setshowRobitoInfo} showRobitoInfo={showRobitoInfo} />}
 
 		</div >
 	)
@@ -129,34 +127,34 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 export default CustomLoader
 
 
-function RobitoInfo({ setshowrobitoInfo, showrobitoInfo }) {
+function RobitoInfo({ setshowRobitoInfo, showRobitoInfo }) {
 
 	useEffect(() => {
-		if (showrobitoInfo) {
-			gsap.fromTo(".popUprobito", { scale: 0, opacity: 0 }, {
+		if (showRobitoInfo) {
+			gsap.fromTo(".popUpRobito", { scale: 0, opacity: 0 }, {
 				scale: 1,
 				opacity: 1,
 				duration: .4,
 				ease: "power.out",
 			})
 		}
-	}, [showrobitoInfo])
+	}, [showRobitoInfo])
 
 	return (
 		<>
 
 			<div className='fixed top-0 left-0 right-0  bottom-0 z-[1000]'>
-				<div className="popUprobito flex  justify-center items-center w-full h-full">
+				<div className="flex items-center justify-center w-full h-full popUpRobito">
 					<div className="relative flex justify-center items-center  w-full md:w-[calc(40rem+20vw)] h-96   ">
-						<div className='absolute top-0 right-0 p-2 cursor-pointer  hover:-skew-x-12 hover:-skew-y-12 z-50 ' onClick={() => setshowrobitoInfo(false)}>
+						<div className='absolute top-0 right-0 z-50 p-2 cursor-pointer hover:-skew-x-12 hover:-skew-y-12 ' onClick={() => setshowRobitoInfo(false)}>
 							<FaTimes color='white' size={'25px'} />
 						</div>
 						<div className="">
-							<img src={robitoImg} alt="" className='w-fit  ' />
+							<img src={robitoImg} alt="" className='w-fit ' />
 						</div>
-						<div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center gap-4">
-							<h2 className='text-center text-3xl' >Robito</h2>
-							<p className='text-center text-xl' >this is a module i found in the internet and i have modified and animate in blender software for my portfolio. <br />hope you like it <FaSmileWink /></p>
+						<div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-4">
+							<h2 className='text-3xl text-center' >Robito</h2>
+							<p className='text-xl text-center' >this is a module i found in the internet and i have modified and animate in blender software for my portfolio. <br />hope you like it <FaSmileWink /></p>
 						</div>
 					</div>
 				</div>

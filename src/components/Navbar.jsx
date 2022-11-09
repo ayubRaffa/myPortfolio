@@ -25,9 +25,9 @@ function CustomLink({ href, value, ...props }) {
     const isActive = useMatch({ path: pathname, end: true })
     return (
         <Link to={href} className={`block ${isActive ? "bg-tab" : ""} no-underline`} >
-            <div className="relative px-2 py-1 text-center flex justify-center items-center gap-1">
+            <div className="relative flex items-center justify-center gap-1 px-2 py-1 text-center">
                 <img src={logo} alt="logo" width='30px'/>
-                <div className={`absolute top-0 right-0 left-0 h-0.5  bg-pink-500 ${isActive ? "block" : "hidden"} `} />
+                <div className={`absolute top-0 right-0 left-0 h-0.5  bg-pink ${isActive ? "block" : "hidden"} `} />
                 {value}
             </div>
         </Link>

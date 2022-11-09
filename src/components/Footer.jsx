@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FaCopyright } from 'react-icons/fa'
-import { BiSmile } from 'react-icons/bi'
 
 
 
@@ -20,27 +19,26 @@ const Footer = ({ App }) => {
             document.removeEventListener('mousemove', dragAndDrop);
         });
         document.addEventListener('mousemove', dragAndDrop);
-
     }
     useEffect(() => {
         footerContainer.current.style.top = '-150px'
+        
     }, [])
-
 
 
     return (
         <div className="relative w-full h-[50px] mt-20 ">
-            <div ref={footerContainer} className='absolute top-0 left-0 right-0 bottom-0 bg-navbar text-center border-t border-gray-500' >
+            <div ref={footerContainer} className='absolute top-0 bottom-0 left-0 right-0 text-center border-t border-gray-500 bg-navbar' >
                 <div className="relative flex justify-between">
                     <div className='absolute -top-1 right-0 left-[-4px] py-[5px] transition-colors duration-300 delay-100  hover:bg-tab hover:cursor-row-resize' onMouseDown={handleEvent} onMouseUp={handleEvent} />
-                    <div className='w-full flex justify-start flex-row gap-4 flex-nowrap p-2'>
+                    <div className='flex flex-row justify-start w-full gap-4 p-2 flex-nowrap'>
                         <span className='cursor-pointer hover:text-white' onClick={() => setContent('get in touch')}>get in touch</span>
                         <span className='cursor-pointer hover:text-white' onClick={() => setContent('about my website')}>about my website</span>
                         {/*     <span className='cursor-pointer hover:text-white' onClick={() => setContent("what's next")}>what's next</span>
                     */} </div>
-                    <span className='p-3 hover:bg-tab rounded-md' onClick={() => footerContainer.current.style.top = '5px'}><IoIosArrowDown /></span>
+                    <span className='p-3 rounded-md hover:bg-tab' onClick={() => footerContainer.current.style.top = '5px'}><IoIosArrowDown /></span>
                 </div>
-                <div className="overflow-hidden flex flex-col justify-between items-center gap-2 mb-3" ref={footer}>
+                <div className="flex flex-col items-center justify-between gap-2 mb-3 overflow-hidden" ref={footer}>
                     <h2 className="">{Content[content]['h2']}</h2>
                     <p className="font-sans text-sm ">{Content[content]['p']}</p>
                     <span>
@@ -50,7 +48,7 @@ const Footer = ({ App }) => {
                         {Content[content]['a']['text']}
                     </a>
                 </div>
-                <div className="bg-navbar absolute bottom-0 left-1/2 -translate-x-1/2 p-2"><span>Handcrafted by me <FaCopyright /> 2022</span></div>
+                <div className="absolute bottom-0 p-2 -translate-x-1/2 bg-navbar left-1/2"><span>Handcrafted by me <FaCopyright /> 2022</span></div>
             </div>
         </div>
     )
@@ -71,7 +69,7 @@ const Content = {
         }
     },
     'about my website': {
-        'h2': `did you like my work? `,
+        'h2': 'did you like my work?',
         'p': 'please check out the source code im tell me what you think',
         'span': "i'm open to any comments",
         'a': {
@@ -79,5 +77,4 @@ const Content = {
             'text': 'go to github'
         }
     }
-
-}
+} 
