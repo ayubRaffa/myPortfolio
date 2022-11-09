@@ -4,6 +4,8 @@ import { IoMail, } from 'react-icons/io5'
 
 
 const Info = () => {
+
+
     return (
 
         <section section className="bg-background2-500  min-h-[500px] " > {/* rounded-tl-[100px] rounded-tr-[100px] */}
@@ -11,16 +13,21 @@ const Info = () => {
                 <div className='absolute top-0 right-0 left-0 bottom-0 linear-gradient ' />
                 < div className=' absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[color:var(--color-bg)] to-transparent' />
                 <div className="basis-0 flex-[1] relative flex justify-center items-end flex-col gap-3 ">
-                    <Article icon={<FaWhatsapp size='2rem' fill='#3378a0' />} content={'0604932189'} href={'https://wa.me/0604932189'} />
-                    <Article icon={<FaGithub size='2rem' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://wa.me/0604932189'} />
-                    <Article icon={<IoMail size='2rem' color='' fill='#3378a0' />} content='idriss4991@gmail.com' href={'mailto:idriss4991@gmail.com'} />
-                    <Article icon={<FaHome size='2rem' fill='#3378a0' />} content={'40070,marrakech morocco'} />
+                    <Article icon={<FaWhatsapp size='32' fill='#3378a0' />} content={'0604932189'} href={'https://wa.me/0604932189'} />
+                    <Article icon={<FaGithub size='32' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://wa.me/0604932189'} />
+                    <Article icon={<IoMail size='32'  fill='#3378a0' />} content='idriss4991@gmail.com' href={'mailto:idriss4991@gmail.com'} />
+                    <Article icon={<FaHome size='32' fill='#3378a0' />} content={'40070,marrakech morocco'} />
                 </div>
                 <div className='w-[1px] gradient' />
                 <div className="basis-0 flex-[1]">
-                    <div className=" relative flex flex-col gap-3 py-4 justify-start max-w-sm">
+                    <div className=" relative flex flex-col gap-4 py-3 justify-start max-w-sm">
                         <h3 className='text-xl uppercase'>ayoub raffiai <pre> idrissi <span className='lowercase'>28 yrs</span></pre></h3>
-                        <h4 className='font-extrabold'><span>2020 - 2022 : </span> Private higher education training in Multimedia Development. <br /> graduated in 2022 </h4>
+                        <div className="foramtion font-extrabold">
+                            <h4 className=''><span>2020 - 2022 : </span> Private higher education training in Multimedia Development.  graduated in 2022 </h4>
+                            <div className="ESP pt-1">
+                                <h3> <span>ESP:</span> <a href="http://rissala.great-site.net" target="_blank" rel="noreferrer">rissala.great-site.net</a></h3>
+                            </div>
+                        </div>
                         <div className="lang">
                             <div className="grid grid-cols-3 gap-1">
                                 <h3>french</h3>
@@ -29,6 +36,7 @@ const Info = () => {
                                 <h3 className='col-span-2 flex gap-1 items-center'> <FaStar /><FaStar /><FaStar /><FaStar /></h3>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 {/*   <div className='absolute  -bottom-10 right-0 left-0 h-52  gradient3 pointer-events-none z-10 ' /> */}

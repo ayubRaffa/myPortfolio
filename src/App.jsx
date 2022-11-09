@@ -9,28 +9,40 @@ import gsap from "gsap";
 import { useRef } from "react";
 const App = () => {
 
+  const App = useRef()
   const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
   useEffect(() => {
-    const colors = ['#080a0f', '#0a0e14', '#030305', '#090b19', '#080a10']
+    const bgColors = ['#080a0f', '#0a0e14', '#030305', '#090b19', '#080a10']
+    const linkColors = ['#c7f9dc', '#f2f9c7', '#f9cec7', '#f9bcf1', '#bcecf9']
 
-    let randomColor
-    function getColor() {
-      let initialColor = randomColor || "#0d1119"
-      randomColor = colors[Math.floor(Math.random() * colors.length)]
-      if (randomColor === initialColor) { getColor() }
-      return randomColor
+    let randomBgColor
+    function getbgColor() {
+      let initialColor = randomBgColor || "#0d1119"
+      randomBgColor = bgColors[Math.floor(Math.random() * bgColors.length)]
+      if (randomBgColor === initialColor) { getbgColor() }
+      return randomBgColor
+    }
+    function getLinkColor() {
+      return linkColors[Math.floor(Math.random() * bgColors.length)]
     }
     if (CanLoadMainContent) {
-      let tl = gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: ".App",
           start: "30% center",
-          end: "65% center",
+          end: "60% center",
           scrub: true,
-          onEnter: () => { document.body.style.setProperty('--color-bg', getColor()); },
-          onLeave: () => { document.body.style.setProperty('--color-bg', getColor()); },
+          onEnter: () => {
+            document.body.style.setProperty('--color-bg', getbgColor());
+            document.body.style.setProperty('--color-link', getLinkColor())
+          },
+          onLeave: () => {
+            document.body.style.setProperty('--color-bg', getbgColor());
+            //    document.body.style.setProperty('--color-link', getLinkColor())
+          },
           onEnterBack: () => {
-            document.body.style.setProperty('--color-bg', getColor());
+            document.body.style.setProperty('--color-bg', getbgColor());
+            //  document.body.style.setProperty('--color-link', getLinkColor())
           },
         }
       });
@@ -43,12 +55,12 @@ const App = () => {
     <>
       {/*  <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
       {CanLoadMainContent &&
-        <div className="App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-hidden">
+        <div ref={App} className="App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-hidden">
           <Navbar />
           <Routes>
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
           </Routes>
-          {/*  <Footer /> */}
+          <Footer refer={App} />
         </div >
       }
     </>

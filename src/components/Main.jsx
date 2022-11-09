@@ -14,7 +14,7 @@ const Main = ({ CanLoadMainContent }) => {
         scale: 1,
         opacity: 1,
         duration: 1,
-        ease: "power.out",
+        ease: "power.in",
       }).to('.title', {
         opacity: 1,
         scale: 1,
@@ -23,7 +23,7 @@ const Main = ({ CanLoadMainContent }) => {
         translateX: "=2.5rem",
         opacity: 1,
         duration: 2,
-        ease: "power.out"
+        ease: "power.in"
       }, 1.4).to(".pinkBlur", {
         opacity: .3,
         duration: 2,
@@ -61,7 +61,7 @@ const Main = ({ CanLoadMainContent }) => {
           </div>
         </div>
         {/* personalPicnal image */}
-        <img src={personalPic} alt='personal' className='personalPic absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  opacity-0 translate-x-10' />
+        <img src={personalPic} alt='personal' className=' personalPic absolute bottom-[-3rem] right-[40%] md:right-[10%] h-[calc(25rem+15vw)] lg:h-[100%]  scale-105 z-50  opacity-0 translate-x-10' />
 
       </main >
       {/* //* Info section */}

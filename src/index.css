@@ -18,6 +18,7 @@
 
 :root {
   --color-bg: #0d1119;
+  --color-link: #b2c4fc;
 }
 
 @layer base {
@@ -59,6 +60,11 @@
     cursor: pointer;
   }
 
+  a {
+    transition: color 100ms;
+    text-decoration-line: underline;
+    color: var(--color-link);
+  }
 
 }
 
@@ -74,7 +80,6 @@
 
 
   .stroke-pink-1 {
-
     -webkit-text-stroke: 1px #561171;
   }
 
@@ -98,9 +103,11 @@
     -webkit-text-stroke: 1px #e0f400;
   }
 
+  
+
   .gradient {
     /* 23273F */
-    background: linear-gradient(90.44deg, #410d55 0.39%, #536976 99.68%);
+    background: linear-gradient(90.44deg, #410d55 .39%, #536976 70.68%);
   }
 
   .gradient2 {
