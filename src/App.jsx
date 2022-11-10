@@ -59,9 +59,9 @@ const App = () => {
 
   return (
     <>
-       <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> 
+      {/*  <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />  */}
       {CanLoadMainContent &&
-        <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-hidden">
+        <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">
           <Navbar />
           <Routes>
             <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
