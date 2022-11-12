@@ -64,7 +64,7 @@ const App = () => {
         <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">
           <Navbar />
           <Routes>
-            <Route path='/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
+            <Route path='/myPortfolio/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>
           </Routes>
           <Footer refer={App} />
         </div >
