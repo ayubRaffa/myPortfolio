@@ -21,8 +21,8 @@ const Footer = ({ App }) => {
         document.addEventListener('mousemove', dragAndDrop);
     }
     useEffect(() => {
-        footerContainer.current.style.top = '-150px'
-        
+        footerContainer.current.style.top = '-170px'
+
     }, [])
 
 
@@ -73,7 +73,7 @@ const Content = {
         'p': 'please check out the source code im tell me what you think',
         'span': "i'm open to any comments",
         'a': {
-            'link': 'https://github.com/ayubRaffa',
+            'link': 'https://github.com/ayubRaffa/myPortfolio',
             'text': 'go to github'
         }
     }

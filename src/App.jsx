@@ -61,7 +61,7 @@ const App = () => {
     <>
       <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />
       {CanLoadMainContent &&
-        <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">
+        <div ref={App} className=" App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">{/* debug-screens */}
           <Navbar />
           <Routes>
             <Route path='/myPortfolio/' element={<Index CanLoadMainContent={CanLoadMainContent} />} ></Route>

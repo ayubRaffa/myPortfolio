@@ -8,7 +8,7 @@ const Info = () => {
 
     return (
 
-        <section section className="bg-background-500  min-h-[500px] " > 
+        <section section className="bg-background-500 " > 
             <div className="relative z-10 flex items-stretch justify-center gap-3 px-1 py-20 pb-40 md:gap-6 lg:gap-10 lg:px-6 bg-hero-cutout-pink-100 ">
                 <div className='absolute top-0 bottom-0 left-0 right-0 linear-gradient ' />
                 < div className=' absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[color:var(--color-bg)] to-transparent' />

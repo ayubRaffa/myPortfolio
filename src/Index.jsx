@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hero from './components/Hero';
 import sphereAnime from './assets/sphereAnime.webm';
 import sphereAnimeCycle from './assets/sphereAnimeCycle.webm';
-import blueWaves from './assets/blueWaves.png';
+import blueWaves from './assets/blueWaves.jpg';
 import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiBlender } from 'react-icons/si';
 import { DiPhotoshop } from 'react-icons/di';
@@ -74,7 +74,7 @@ const Index = ({ CanLoadMainContent }) => {
       <main className='px-1'>
 
         {/* //* the quote section  */}
-        <section className=" relative overflow-visible bg-no-repeat bg-cover bg-blend-screen  flex items-center justify-center h-[75vh]">
+        <section className=" relative overflow-visible bg-no-repeat bg-cover bg-blend-screen flex items-center justify-center h-[75vh]">
           <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none select-none">
             <video src={sphereAnime} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
           </div>
@@ -156,7 +156,7 @@ const Index = ({ CanLoadMainContent }) => {
 
 
         {/* //* the quote section  */}
-        <section className="quote relative bg-no-repeat bg-cover flex items-center justify-center h-[75vh]">
+        <section className="quote relative bg-no-repeat bg-cover flex items-center justify-center h-screen">
           <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center translate-x-0 pointer-events-none select-none mix-blend-screen">
             <img src={blueWaves} alt="sphere" className='max-w-md opacity-0 foregroundCircle' />
           </div>
@@ -164,7 +164,7 @@ const Index = ({ CanLoadMainContent }) => {
             <img src={blueWaves} alt="sphere" className='max-w-lg backgroundCircle' />
           </div>
           <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a]' />
+            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a] blur-lg' />
             <p className='text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize font-PlayfairDisplayediumItalic'>
               i may be only a beginner with litter experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
             </p>
