@@ -28,3 +28,5 @@ src/assets/*.jpg
 src/assets/*.png
 src/assets/*.webm
 src/assets/old
+
+vite.config.*.mjs
