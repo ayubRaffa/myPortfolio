@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import CustomLoader from './components/CustomLoader';
 import gsap from "gsap";
 import { useRef } from "react";
+const App = () => {
 
   const App = useRef()
   const [CanLoadMainContent, setCanLoadMainContent] = useState(false);
