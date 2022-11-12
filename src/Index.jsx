@@ -93,9 +93,9 @@ const Index = ({ CanLoadMainContent }) => {
 
             <fieldset className='border rounded-3xl'>
               <legend className=''>
-                <h1 className="whitespace-pre  relative text-[4rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
+                <h1 className="whitespace-pre px-3 relative text-[4rem] md:text-[calc(1.5rem+2vw)] text-transparent stroke-blue-1 text-center">
                   my objective
-                  <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[4.5rem] md:text-[calc(3.5rem+3vw)]  text-transparent stroke-blue-1 blur-sm ">
+                  <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[4.5rem] md:text-[calc(3.5rem+3vw)] text-transparent stroke-blue-1 blur-sm ">
                     my objective
                   </div>
                 </h1>
@@ -115,17 +115,13 @@ const Index = ({ CanLoadMainContent }) => {
         </section>
 
         {/* //* the quote section  */}
-        <section className="quote relative bg-no-repeat bg-cover flex items-center justify-center h-[75vh]">
-          <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center translate-x-0 pointer-events-none select-none mix-blend-screen">
-            <img src={blueWaves} alt="sphere" className='max-w-md opacity-0 foregroundCircle' />
+        <section className="relative flex items-center justify-center h-screen bg-no-repeat bg-cover bg-blend-screen">
+          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none select-none">
+            <video src={sphereAnimeCycle} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
           </div>
-          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center scale-125 translate-x-0 pointer-events-none select-none mix-blend-color-dodge">
-            <img src={blueWaves} alt="sphere" className='max-w-lg backgroundCircle' />
-          </div>
-          <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a]' />
-            <p className='text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize font-PlayfairDisplayediumItalic'>
-              i may be only a beginner with litter experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
+          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+            <p className='px-10 text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize up font-PlayfairDisplayediumItalic'>
+              combining the art of design with my programming skills is what interest me in front-end development
             </p>
           </div>
         </section>
@@ -137,7 +133,7 @@ const Index = ({ CanLoadMainContent }) => {
           <div className="translate-y-6 opacity-0 revealSection ">
             <fieldset className='border rounded-3xl'>
               <legend className=''>
-                <h1 className="relative whitespace-pre text-[4rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
+                <h1 className="relative whitespace-pre px-3 text-[4rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
                   about me
                   <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[4.5rem] md:text-[calc(3.5rem+3vw)]  text-transparent stroke-blue-1 blur-sm ">
                     about me
@@ -160,16 +156,21 @@ const Index = ({ CanLoadMainContent }) => {
 
 
         {/* //* the quote section  */}
-        <section className="relative flex items-center justify-center h-screen bg-no-repeat bg-cover bg-blend-screen">
-          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none select-none">
-            <video src={sphereAnimeCycle} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+        <section className="quote relative bg-no-repeat bg-cover flex items-center justify-center h-[75vh]">
+          <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center translate-x-0 pointer-events-none select-none mix-blend-screen">
+            <img src={blueWaves} alt="sphere" className='max-w-md opacity-0 foregroundCircle' />
           </div>
-          <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <p className='px-10 text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize up font-PlayfairDisplayediumItalic'>
-              combining the art of design with my programming skills is what interest me in front-end development
+          <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center scale-125 translate-x-0 pointer-events-none select-none mix-blend-color-dodge">
+            <img src={blueWaves} alt="sphere" className='max-w-lg backgroundCircle' />
+          </div>
+          <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
+            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a]' />
+            <p className='text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize font-PlayfairDisplayediumItalic'>
+              i may be only a beginner with litter experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
             </p>
           </div>
         </section>
+
 
 
 
@@ -177,7 +178,7 @@ const Index = ({ CanLoadMainContent }) => {
         {/*  <Skills refer={animate} /> */}
 
 
-        <section className="min-h-screen skillsSection  ">
+        <section className="min-h-screen skillsSection ">
           <div className="flex justify-center ">
             <video ref={iconsAnimationRef} muted playsInline className=' mix-blend-lighten '  >
               <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
@@ -187,7 +188,7 @@ const Index = ({ CanLoadMainContent }) => {
           </video> */}
           </div>
           <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
-            <p className=' -translate-y-8 text-sm text-center'>some of what i learned so far </p>
+            <p className='text-sm text-center -translate-y-8 '>some of what i learned so far </p>
             <div className=" flex flex-col md:mx-[calc(2rem+3vw)] gap-3">
               <p className='text-gray-400'>
                 for the last 2 years, when i began my multimedia training till now and i day by day learn and grasp more and more technologies and techniques, starting from the basics of html and css to the logics of programing languages, to the manipulation of the DOM with jquery and requesting data with ajax, to the virtual DOM of react and the javascript runtime environment nodejs...
@@ -196,11 +197,11 @@ const Index = ({ CanLoadMainContent }) => {
               <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
                 <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
                 <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
-                <li >Developing applications usign <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
-                <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in my code . </li>
-                <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web using RegEx, if no dedicated apis is available</li>
+                <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
+                <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
+                <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
                 <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
-                <li >design an integrated sql database using MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+                <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
                 ...
               </ul>
             </div>

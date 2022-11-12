@@ -49,7 +49,7 @@ const Hero = ({ CanLoadMainContent }) => {
         <div className="relative flex flex-col items-start justify-center min-h-screen px-4 scale-110 opacity-0 title md:w-2/3 lg:w-1/2 md:ml-6">
           <div className="flex flex-col justify-center gap-5 text-right md:text-left pb-28">
             <h1 className='text-6xl font-extrabold capitalize lg:text-5xl xl:text-6xl stroke-blue-2 font-alcantera'>HI, it me! ayoub <br />
-              i make web sites, and other <pre className='font-header'>stuff &#x1F604;</pre>
+              i make websites, and other <pre className='font-header'>stuff &#x1F604;</pre>
             </h1>
             <h2 className='text-3xl font-bold stroke-blue-1 lg:text-3xl font-alcantera'>
               by the way, i am not a programmer !

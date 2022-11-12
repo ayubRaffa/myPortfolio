@@ -81,7 +81,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 
 
 
-	const diveInClick = () => {
+	 	const diveInClick = () => {
 		const tl = gsap.timeline()
 		tl.to(".loading", {
 			duration: .6,
@@ -96,10 +96,38 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			})
 		})
 	}
+	/*const diveInClick = () => {
+		const tl = gsap.timeline()
+		tl.to(".loading", {
+			duration: 4,
+			scale: 1.4,
+			opacity: 0,
+			ease: "power.out",
+			onStart: () => {
+				robitoRef.current.currentTime = 6
+				robitoRef.current.play()
+				gsap.to('.aaaaa', {
+					pointerEvents: "none",
+					userSelect: "none",
+					xPercent: -120,
+					duration: 3.5,
+					onComplete: () => {
+						gsap.to(".loading_Wrapper", {
+							opacity: 0,
+							duration: 1,
+							display: "none",
+						})
+						setCanLoadMainContent(true)
+					}
+
+				})
+			},
+		})
+	} */
 
 
 	return (
-		<div className='loading_Wrapper saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})`}}>
+		<div className='loading_Wrapper saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
 			<div className={`loading relative h-screen flex flex-col md:flex-row justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer" onClick={diveInClick}>
 					<h1 className='text-4xl font-extrabold capitalize opacity-0 mainText lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
@@ -112,7 +140,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 					<h2 className="letsDiveIN opacity-0 text-xl mt-2 w-fit text-left uppercase font-revalia  text-blue-800 cursor-pointer z-[4345] bg-white px-2 hover:bg-background-500 hover:text-white" onClick={diveInClick}>lets dive in <FaGreaterThan /></h2>
 				</div>
 
-				<div className="opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowRobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
+				<div className="aaaaa opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowRobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
 					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14 pointer-events-none' ></video>
 				</div>
 			</div>

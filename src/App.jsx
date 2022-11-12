@@ -7,10 +7,9 @@ import Footer from './components/Footer';
 import CustomLoader from './components/CustomLoader';
 import gsap from "gsap";
 import { useRef } from "react";
-const App = () => {
 
   const App = useRef()
-  const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
+  const [CanLoadMainContent, setCanLoadMainContent] = useState(false);
   useEffect(() => {
     const bgColors = ['#080a0f', '#080a10', '#0a0e14', '#030305', '#06070f']
     const linkColors = ['#c7f9dc', '#f2f9c7', '#f9cec7', '#f9bcf1', '#bcecf9']
@@ -59,7 +58,7 @@ const App = () => {
 
   return (
     <>
-      {/*  <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />  */}
+      <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />
       {CanLoadMainContent &&
         <div ref={App} className="debug-screens App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">
           <Navbar />
