@@ -80,7 +80,7 @@
 
   .stroke-blue-2 {
     @apply text-transparent;
-    -webkit-text-stroke: 1px #284e74;
+    -webkit-text-stroke: 1px #194a7b;
   }
 
   .gradient {

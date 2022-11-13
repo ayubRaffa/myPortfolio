@@ -40,10 +40,10 @@ const Hero = ({ CanLoadMainContent }) => {
 
   return (
     <>
-      <header className="Main mt-2 opacity-0 scale-125 relative bg-[color:var(--color-bg)] bg-no-repeat bg-cover z-40 " style={{ backgroundImage: `url(${mainbg})`}}>
+      <header className="Main opacity-0 scale-125 relative bg-[color:var(--color-bg)] bg-no-repeat bg-cover z-40 " style={{ backgroundImage: `url(${mainbg})`}}>
         {/* blured background */}
         <div className=" absolute rotate-180 lg:rotate-0 bottom-0 lg:top-0 right-0 w-full h-full md:h-2/3  lg:w-1/2 lg:h-[50rem] md:bg-contain bg-cover   bg-no-repeat  bg-[color:var(--color-bg)] bg-blend-lighten -z-20" style={{ backgroundImage: `url(${pexels})`}}/>
-        <div className='pinkBlur absolute -bottom-0 -right-0 h-2/3 w-[90vw] lg:w-[60vw] blur-[60px]  rounded-tl-full bg-pink mix-blend-color opacity-0 -z-10' />
+        <div className='pinkBlur absolute -bottom-0 -right-0 h-2/3 w-[90vw] lg:w-[60vw] blur-[60px]  rounded-tl-full bg-pink mix-blend-color opacity-0 ' />
         <div className='blueBlur absolute -top-0 -left-0 h-2/3 right-1/3 blur-[60px] rounded-br-full bg-blue-500 mix-blend-color opacity-0 -z-10' />
         {/* headers */}
         <div className="relative flex flex-col items-start justify-center min-h-screen px-4 scale-110 opacity-0 title md:w-2/3 lg:w-1/2 md:ml-6">

@@ -179,31 +179,39 @@ const Index = ({ CanLoadMainContent }) => {
 
 
         <section className="min-h-screen skillsSection ">
-          <div className="flex justify-center ">
-            <video ref={iconsAnimationRef} muted playsInline className=' mix-blend-lighten '  >
-              <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
-            </video>
-            {/*  <video ref={iconsAnimationRef} muted playsInline className='hidden translate-y-11 mix-blend-lighten md:block'  >
-            <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="relative whitespace-pre px-3 text-[2rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
+              some of what i learned so far
+              <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[2rem] md:text-[calc(1.5rem+2vw)]  text-transparent stroke-blue-1 blur-sm ">
+                some of what i learned so far
+              </div>
+            </h1>
+            <div className="flex justify-center ">
+              <video ref={iconsAnimationRef} muted playsInline className=' mix-blend-lighten '  >
+                <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
+              <source src={iconsAnimationMobile} media='(max-width:799px)' type='video/webm' />
+              </video>
+              {/*  <video ref={iconsAnimationRef} muted playsInline className='hidden translate-y-11 mix-blend-lighten md:block'  >
           </video> */}
-          </div>
-          <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
-            <p className='text-sm text-center -translate-y-8 '>some of what i learned so far </p>
-            <div className=" flex flex-col md:mx-[calc(2rem+3vw)] gap-3">
-              <p className='text-gray-400'>
-                for the last 2 years, when i began my multimedia training till now and i day by day learn and grasp more and more technologies and techniques, starting from the basics of html and css to the logics of programing languages, to the manipulation of the DOM with jquery and requesting data with ajax, to the virtual DOM of react and the javascript runtime environment nodejs...
-              </p>
-              <p className=''>all of that had lead me to be able to perform at least a variety of tasks.  as such :</p>
-              <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
-                <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
-                <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
-                <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
-                <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
-                <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
-                <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
-                <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
-                ...
-              </ul>
+            </div>
+            <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
+              {/*  <p className='text-sm text-center -translate-y-8 '>some of what i learned so far </p> */}
+              <div className=" flex flex-col md:mx-[calc(2rem+3vw)] gap-3">
+                <p className='text-gray-400'>
+                  for the last 2 years, when i began my multimedia training till now and i day by day learn and grasp more and more technologies and techniques, starting from the basics of html and css to the logics of programing languages, to the manipulation of the DOM with jquery and requesting data with ajax, to the virtual DOM of react and the javascript runtime environment nodejs...
+                </p>
+                <p className=''>all of that had lead me to be able to perform at least a variety of tasks.  as such :</p>
+                <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
+                  <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
+                  <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
+                  <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
+                  <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
+                  <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
+                  <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
+                  <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+                  ...
+                </ul>
+              </div>
             </div>
           </div>
         </section>

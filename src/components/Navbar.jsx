@@ -1,7 +1,7 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { FaReact } from 'react-icons/fa'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
 const navbar = () => {
 
 
@@ -10,9 +10,9 @@ const navbar = () => {
             {/* // * tabs   */}
             <ul className="flex items-center justify-start w-full list-none ">
                 <li className='ml-3'>
-                    <CustomLink href='/' value='who am i' />
+                    <CustomLink href='/myPortfolio' value='aboutMe' />
                 </li>
-           {/*      <li>
+                {/*      <li>
                     <CustomLink href='/aboutMe' value='about me' />
                 </li> */}
             </ul>
@@ -26,7 +26,7 @@ function CustomLink({ href, value, ...props }) {
     return (
         <Link to={href} className={`block ${isActive ? "bg-tab" : ""} no-underline`} >
             <div className="relative flex items-center justify-center gap-1 px-2 py-1 text-center">
-                <img src={logo} alt="logo" width='30px'/>
+                <FaReact fill='#00728a' />
                 <div className={`absolute top-0 right-0 left-0 h-0.5  bg-pink ${isActive ? "block" : "hidden"} `} />
                 {value}
             </div>
