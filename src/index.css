@@ -80,11 +80,23 @@
 
   .stroke-blue-2 {
     @apply text-transparent;
-    -webkit-text-stroke: 1px #194a7b;
+    -webkit-text-stroke: 2px #19548f;
   }
 
   .gradient {
     background: linear-gradient(90.44deg, #240530 .39%, #30434fda 70.68%);
+  }
+
+  .letsDiveIN{
+    animation: backgroundcolor 4s linear 2s infinite alternate-reverse ;
+  }
+  @keyframes backgroundcolor {
+    from{
+      background-color: #f6f6f6;
+    }
+    to{
+      background-color: #091017;
+    }
   }
 }
 

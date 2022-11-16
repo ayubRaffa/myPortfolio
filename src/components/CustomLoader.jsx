@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap';
-import robito from '../assets/0000-0132_robito.webm'
+import robito from '../assets/runningRobito.webm'
 import robitoImg from '../assets/robito.png'
 import ac from '../assets/ac.png'
 import { FaTimes, FaGreaterThan, FaSmileWink } from 'react-icons/fa';
@@ -14,7 +14,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 	let canrobitoHovered = false
 
 	const timeupdate = () => {
-		if (robitoRef.current.currentTime >= 4.16) {
+		if (robitoRef.current.currentTime >= 3.3) {
 			robitoRef.current.pause()
 			canrobitoHovered = true
 			robitoRef.current.removeEventListener("timeupdate", timeupdate)
@@ -38,6 +38,12 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 	const robitoout = () => {
 		if (robitoRef.current.currentTime >= 4.7) {
 			robitoRef.current.play()
+			robitoRef.current.addEventListener("timeupdate", () => {
+				if (robitoRef.current.currentTime >= 5.5) {
+					robitoRef.current.pause()
+				}
+
+			});
 		}
 
 	}
@@ -48,9 +54,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			robitoRef.current.addEventListener("timeupdate", timeupdate);
 			robitoRef.current.play()
 		}
-		gsap.context(() => {
 
-		})
 		const timeline = gsap.timeline({ defaults: { duration: .5 } })
 		timeline.to(".mainText", {
 			opacity: 1,
@@ -59,14 +63,14 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 		}).fromTo(".robito", { opacity: 0, translateX: "+=100px" }, {
 			translateX: '0',
 			opacity: 1,
-			duration: 2,
-			ease: "power.out",
+			duration: 1.8,
+			ease: "power2.out",
 			delay: .5,
 			onComplete: () => playRobito()
 		}).fromTo(".enthusiast", { opacity: 0, translateX: "-=100px" }, {
 			translateX: '0',
 			opacity: 1,
-			ease: "power3z.out",
+			ease: "power3.out",
 			duration: 2,
 			delay: .8,
 		}).fromTo(".letsDiveIN", { opacity: 0 }, {
@@ -76,27 +80,30 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			ease: "power.out"
 		})
 
+
+		//gsap.fromTo(".letsDiveIN", { background: "red" }, { background: "green", yoyo: true, duration: 2,repeat:-1 });
+
 	}, [])
 
 
 
 
-	const diveInClick = () => {
-		const tl = gsap.timeline()
-		tl.to(".loading", {
-			duration: .6,
-			scale: 1.4,
-			opacity: 0,
-			ease: "power.out",
-			onStart: () => setCanLoadMainContent(true),
-			onComplete: () => gsap.to(".loading_Wrapper", {
+	/*	const diveInClick = () => {
+			const tl = gsap.timeline()
+			tl.to(".loading", {
+				duration: .6,
+				scale: 1.4,
 				opacity: 0,
-				duration: 1,
-				display: "none",
+				ease: "power.out",
+				onStart: () => setCanLoadMainContent(true),
+				onComplete: () => gsap.to(".loading_Wrapper", {
+					opacity: 0,
+					duration: 1,
+					display: "none",
+				})
 			})
-		})
-	}
-	/*const diveInClick = () => {
+		} */
+	const diveInClick = () => {
 		const tl = gsap.timeline()
 		tl.to(".loading", {
 			duration: 4,
@@ -107,11 +114,9 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 				robitoRef.current.currentTime = 6
 				robitoRef.current.play()
 				gsap.to('.robito_wrapper', {
-					pointerEvents: "none",
-					userSelect: "none",
 					xPercent: -120,
 					duration: 3.5,
-					onComplete: () => {
+					onStart: () => {
 						gsap.to(".loading_Wrapper", {
 							opacity: 0,
 							duration: 1,
@@ -123,14 +128,14 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 				})
 			},
 		})
-	} */
+	}
 
 
 	return (
 		<div className='loading_Wrapper saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
-			<div className={`loading relative h-screen flex flex-col justify-start md:flex-row md:justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
-				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer" onClick={diveInClick}>
-					<h1 className='text-2xl px-2 font-extrabold capitalize opacity-0 mainText sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
+			<div className={`loading relative h-screen flex flex-col justify-center md:flex-row md:justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
+				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer outline-none" onClick={diveInClick}>
+					<h1 className='px-2 text-4xl font-extrabold capitalize opacity-0 mainText  md:text-4xl lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
 						<br />
 						& front/back-end web developer.
 					</h1>
@@ -141,7 +146,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 				</div>
 
 				<div className="robito_wrapper opacity-0 basis-0 grow-[1]  self-end md:self-center  cursor-pointer robito" onClick={() => setshowRobitoInfo(true)} onMouseEnter={robitoHovering} onMouseLeave={robitoout}>
-					<video src={robito} type='video/webm' ref={robitoRef} /* autoPlay */ playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14 pointer-events-none' ></video>
+					<video src={robito} type='video/webm' ref={robitoRef} playsInline muted className='w-[19rem] lg:w-96 scale-125 md:-translate-x-16 -translate-y-14 pointer-events-none' ></video>
 				</div>
 			</div>
 			{showRobitoInfo && <RobitoInfo setshowRobitoInfo={setshowRobitoInfo} showRobitoInfo={showRobitoInfo} />}

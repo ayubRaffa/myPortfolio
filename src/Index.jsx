@@ -22,7 +22,7 @@ const Index = ({ CanLoadMainContent }) => {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: ".skillsSection",
-      start: "center bottom ",
+      start: "top bottom ",
       onEnter: () => {
         iconsAnimationRef.current.currentTime = 1.5
         iconsAnimationRef.current.play()
@@ -58,7 +58,7 @@ const Index = ({ CanLoadMainContent }) => {
           })
         }
       }) */
-
+    document.querySelectorAll('video').forEach((video) => video.play())
 
 
   }, [])
@@ -71,12 +71,12 @@ const Index = ({ CanLoadMainContent }) => {
       {/* //* hero section */}
       <Hero CanLoadMainContent={CanLoadMainContent} />
 
-      <main className='px-1'>
+      <main className='px-1 pb-10'>
 
         {/* //* the quote section  */}
         <section className=" relative overflow-visible bg-no-repeat bg-cover bg-blend-screen flex items-center justify-center h-[75vh]">
           <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none select-none">
-            <video src={sphereAnime} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+            <video src={sphereAnime} autoPlay playsInline muted loop type="video/webm" className='mix-blend-lighten opacity-50'></video>
           </div>
           <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
             <blockquote className='font-extrabold text-center capitalize font-PlayfairDisplayediumItalic'>
@@ -117,10 +117,11 @@ const Index = ({ CanLoadMainContent }) => {
         {/* //* the quote section  */}
         <section className="relative flex items-center justify-center h-screen bg-no-repeat bg-cover bg-blend-screen">
           <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none select-none">
-            <video src={sphereAnimeCycle} playsInline autoPlay muted loop type="video/webm" className='mix-blend-color-dodge'></video>
+            <video src={sphereAnimeCycle} autoPlay playsInline muted loop type="video/webm" className='mix-blend-lighten opacity-50'>
+            </video>
           </div>
           <div className="relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <p className='px-10 text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize up font-PlayfairDisplayediumItalic'>
+            <p className='px-5 text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize up font-PlayfairDisplayediumItalic'>
               combining the art of design with my programming skills is what interest me in front-end development
             </p>
           </div>
@@ -157,69 +158,68 @@ const Index = ({ CanLoadMainContent }) => {
 
         {/* //* the quote section  */}
         <section className="quote relative bg-no-repeat bg-cover flex items-center justify-center h-screen">
-          <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center translate-x-0 pointer-events-none select-none mix-blend-screen">
+          {/*  <div className="absolute top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center translate-x-0 pointer-events-none select-none mix-blend-screen">
             <img src={blueWaves} alt="sphere" className='max-w-md opacity-0 foregroundCircle' />
-          </div>
+          </div> */}
           <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center scale-125 translate-x-0 pointer-events-none select-none mix-blend-color-dodge">
             <img src={blueWaves} alt="sphere" className='max-w-lg backgroundCircle' />
           </div>
           <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a] blur-lg' />
+            <div className='z-10 mix-blend-overlay -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a] blur-lg' />
             <p className='text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize font-PlayfairDisplayediumItalic'>
-              i may be only a beginner with litter experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
+              i may be only a beginner with little experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
             </p>
           </div>
         </section>
 
 
 
-
-        {/* skills */}
-        {/*  <Skills refer={animate} /> */}
-
-
         <section className="min-h-screen skillsSection ">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="relative whitespace-pre px-3 text-[2rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
-              some of what i learned so far
-              <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[2rem] md:text-[calc(1.5rem+2vw)]  text-transparent stroke-blue-1 blur-sm ">
-                some of what i learned so far
-              </div>
-            </h1>
-            <div className="flex justify-center ">
-              <video ref={iconsAnimationRef} muted playsInline className=' mix-blend-lighten '  >
-                <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
-              <source src={iconsAnimationMobile} media='(max-width:799px)' type='video/webm' />
-              </video>
-              {/*  <video ref={iconsAnimationRef} muted playsInline className='hidden translate-y-11 mix-blend-lighten md:block'  >
+            <fieldset className='border rounded-3xl'>
+              <legend className=''>
+                <h1 className="relative whitespace-pre px-3 text-[1.5rem] md:text-[calc(1.5rem+2vw)]  text-transparent  stroke-blue-1  text-center">
+                  some of what i learned so far
+                  <div className="whitespace-pre absolute top-0 left-0 right-0 bottom-0 font-header text-[1.5rem] md:text-[calc(1.5rem+2vw)]  text-transparent stroke-blue-1 blur-sm ">
+                    some of what i learned so far
+                  </div>
+                </h1>
+              </legend>
+              <div className="flex justify-center ">
+                <video ref={iconsAnimationRef} autoPlay muted playsInline className=' mix-blend-lighten '  >
+                  <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
+                {/*   <source src={iconsAnimationMobile} media='(max-width:799px)' type='video/webm' /> */}
+                </video>
+                {/*  <video ref={iconsAnimationRef} muted playsInline className='hidden translate-y-11 mix-blend-lighten md:block'  >
           </video> */}
-            </div>
-            <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
-              {/*  <p className='text-sm text-center -translate-y-8 '>some of what i learned so far </p> */}
-              <div className=" flex flex-col md:mx-[calc(2rem+3vw)] gap-3">
-                <p className='text-gray-400'>
-                  for the last 2 years, when i began my multimedia training till now and i day by day learn and grasp more and more technologies and techniques, starting from the basics of html and css to the logics of programing languages, to the manipulation of the DOM with jquery and requesting data with ajax, to the virtual DOM of react and the javascript runtime environment nodejs...
-                </p>
-                <p className=''>all of that had lead me to be able to perform at least a variety of tasks.  as such :</p>
-                <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
-                  <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
-                  <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
-                  <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
-                  <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
-                  <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
-                  <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
-                  <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
-                  ...
-                </ul>
               </div>
-            </div>
+              <div className=" px-[calc(1rem+5vw)] flex flex-col justify-center items-center ">
+                <div className=" flex flex-col md:mx-[calc(2rem+3vw)] gap-3 py-2">
+                  <p className='text-gray-400'>
+                    for the last 2 years, when i began my multimedia training till now and i day after day learn and grasp more and more technologies and techniques, starting from the basics of html and css to the logics of programing languages, to the manipulation of the DOM with jquery and requesting data with ajax, to the virtual DOM of react and the javascript runtime environment nodejs...
+                  </p>
+                  <p className=''>all of that had lead me to be able to perform at least a variety of tasks.  as such :</p>
+                  <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
+                    <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
+                    <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
+                    <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
+                    <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
+                    <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
+                    <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
+                    <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+                    ...
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
           </div>
+
         </section>
 
 
 
         {/* //* my  section */}
-        <section className="flex items-center justify-center min-h-screen translate-y-6 opacity-0 revealSection">
+        <section className="mt-10 min-h-screen flex items-center justify-center translate-y-6 opacity-0 revealSection">
           <div className="h-full ">
             <div className="relative w-full px-[calc(1rem+5vw)] max-w-[1000Px] flex flex-col gap-6 items-center">
               <h1 className="relative whitespace-pre text-[4.5rem] md:text-[calc(4rem+3vw)]  text-transparent  stroke-blue-1  text-center">
@@ -254,10 +254,3 @@ const Index = ({ CanLoadMainContent }) => {
 }
 
 export default Index
-
-
-
-
-
-
-
