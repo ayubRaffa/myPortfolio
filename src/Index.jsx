@@ -2,13 +2,13 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hero from './components/Hero';
-import sphereAnime from './assets/sphereAnime.webm';
-import sphereAnimeCycle from './assets/sphereAnimeCycle.webm';
+import sphereAnime from './assets/compressed/sphereAnime.webm';
+import sphereAnimeCycle from './assets/compressed/sphereAnimeCycle.webm';
 import blueWaves from './assets/blueWaves.jpg';
 import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiBlender } from 'react-icons/si';
 import { DiPhotoshop } from 'react-icons/di';
-import iconsAnimation from './assets/iconsAnime.webm';
+import iconsAnimation from './assets/compressed/iconsAnime.webm';
 import iconsAnimationMobile from './assets/iconsAnimeMobile.webm';
 
 gsap.registerPlugin(ScrollTrigger)

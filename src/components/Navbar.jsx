@@ -3,6 +3,7 @@ import { FaReact } from 'react-icons/fa'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 // import logo from '../assets/logo.png'
 const navbar = () => {
+    
 
 
     return (

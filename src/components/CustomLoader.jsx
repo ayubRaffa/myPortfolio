@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap';
-import robito from '../assets/runningRobito.webm'
+import robito from '../assets/compressed/runningRobito.webm'
 import robitoImg from '../assets/robito.png'
 import ac from '../assets/ac.png'
 import { FaTimes, FaGreaterThan, FaSmileWink } from 'react-icons/fa';
@@ -104,9 +104,9 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			})
 		} */
 	const diveInClick = () => {
-		const tl = gsap.timeline()
-		tl.to(".loading", {
-			duration: 4,
+	
+		gsap.to(".loading", {
+			duration: 3.5,
 			scale: 1.4,
 			opacity: 0,
 			ease: "power.out",
@@ -116,7 +116,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 				gsap.to('.robito_wrapper', {
 					xPercent: -120,
 					duration: 3.5,
-					onStart: () => {
+					onComplete: () => {
 						gsap.to(".loading_Wrapper", {
 							opacity: 0,
 							duration: 1,
