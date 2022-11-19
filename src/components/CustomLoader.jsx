@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
-import gsap from 'gsap';
+import gsap from 'gsap'
 import robito from '../assets/compressed/runningRobito.webm'
 import robitoImg from '../assets/robito.png'
 import ac from '../assets/ac.png'
-import { FaTimes, FaGreaterThan, FaSmileWink } from 'react-icons/fa';
+import { FaTimes, FaGreaterThan, FaSmileWink } from 'react-icons/fa'
 
 
 
@@ -11,25 +11,25 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 	const [showRobitoInfo, setshowRobitoInfo] = useState(false)
 
 	const robitoRef = useRef()
-	let canrobitoHovered = false
+	let canRobitoHovered = false
 
 	const timeupdate = () => {
 		if (robitoRef.current.currentTime >= 3.3) {
 			robitoRef.current.pause()
-			canrobitoHovered = true
+			canRobitoHovered = true
 			robitoRef.current.removeEventListener("timeupdate", timeupdate)
 		}
 	}
 	const timeupdate2 = () => {
 		if (robitoRef.current.currentTime >= 4.7) {
 			robitoRef.current.pause()
-			canrobitoHovered = true
+			canRobitoHovered = true
 			robitoRef.current.removeEventListener("timeupdate", timeupdate2)
 		}
 	}
 	const robitoHovering = () => {
-		if (canrobitoHovered) {
-			canrobitoHovered = false
+		if (canRobitoHovered) {
+			canRobitoHovered = false
 			robitoRef.current.currentTime = 4.16
 			robitoRef.current.addEventListener("timeupdate", timeupdate2);
 			robitoRef.current.play()
@@ -104,7 +104,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			})
 		} */
 	const diveInClick = () => {
-	
+
 		gsap.to(".loading", {
 			duration: 3.5,
 			scale: 1.4,
@@ -132,10 +132,10 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 
 
 	return (
-		<div className='loading_Wrapper saturate-80 bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
-			<div className={`loading relative h-screen flex flex-col justify-center md:flex-row md:justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
+		<div className='loading_Wrapper bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
+			<div className={`loading relative h-screen flex flex-col justify-start md:flex-row md:justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer outline-none" onClick={diveInClick}>
-					<h1 className='px-2 text-4xl font-extrabold capitalize opacity-0 mainText  md:text-4xl lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
+					<h1 className='px-2 text-4xl font-extrabold capitalize opacity-0 mainText md:text-4xl lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer
 						<br />
 						& front/back-end web developer.
 					</h1>

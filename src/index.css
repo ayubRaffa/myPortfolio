@@ -87,14 +87,16 @@
     background: linear-gradient(90.44deg, #240530 .39%, #30434fda 70.68%);
   }
 
-  .letsDiveIN{
-    animation: backgroundcolor 4s linear 2s infinite alternate-reverse ;
+  .letsDiveIN {
+    animation: backgroundcolor 4s linear 4s infinite alternate-reverse;
   }
+
   @keyframes backgroundcolor {
-    from{
+    from {
       background-color: #f6f6f6;
     }
-    to{
+
+    to {
       background-color: #091017;
     }
   }
