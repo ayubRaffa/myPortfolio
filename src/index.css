@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: alcantera;
-  src: url('./assets/AlcanteraSerif-gx4jp.ttf');
+  src: url('./assets/font/AlcanteraSerif-gx4jp.ttf');
 }
 
 @font-face {
   font-family: PlayfairDisplayediumItalic;
-  src: url('./assets/PlayfairDisplayMediumItalic-8MaEg.ttf');
+  src: url('./assets/font/PlayfairDisplayMediumItalic-8MaEg.ttf');
 }
 
 @tailwind base;

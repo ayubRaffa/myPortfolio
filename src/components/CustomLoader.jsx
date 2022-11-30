@@ -104,35 +104,37 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 			})
 		} */
 	const diveInClick = () => {
+		let mm = gsap.matchMedia()
+		mm.add({
+			isMobile: "(max-width:500px)",
+			isDesktop: "(min-width:500px)"
+		}, (context) => {
+			let { isDesktop, isMobile } = context.conditions
+			gsap.to(".loading", {
+				duration: 3,
+				scale: 1.4,
+				opacity: 0,
+				ease: "power.out",
+				onStart: () => {
+					if (isDesktop) { robitoRef.current.currentTime = 6; robitoRef.current.play() }
+					gsap.to('.robito_wrapper', {
+						xPercent: -120,
+						duration: 3,
+						onComplete: () => {
+							gsap.to(".loading_Wrapper", { opacity: 0, duration: .5, display: "none", })
+							setCanLoadMainContent(true)
+						}
 
-		gsap.to(".loading", {
-			duration: 3.5,
-			scale: 1.4,
-			opacity: 0,
-			ease: "power.out",
-			onStart: () => {
-				robitoRef.current.currentTime = 6
-				robitoRef.current.play()
-				gsap.to('.robito_wrapper', {
-					xPercent: -120,
-					duration: 3.5,
-					onComplete: () => {
-						gsap.to(".loading_Wrapper", {
-							opacity: 0,
-							duration: 1,
-							display: "none",
-						})
-						setCanLoadMainContent(true)
-					}
-
-				})
-			},
+					})
+				},
+			})
 		})
+
 	}
 
 
 	return (
-		<div className='loading_Wrapper bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
+		<div className=' loading_Wrapper bg-blend-lighten bg-center bg-no-repeat bg-cover fixed bottom-0 right-0 left-0 top-0 z-[100] overflow-hidden bg-background-500 ' style={{ backgroundImage: `url(${ac})` }}>
 			<div className={`loading relative h-screen flex flex-col justify-start md:flex-row md:justify-center items-center  ${showRobitoInfo && " blur-xl pointer-events-none"}`} >
 				<div className="relative basis-0 grow-[2] flex flex-col justify-end gap-4  text-left pl-10 lg:pl-16 cursor-pointer outline-none" onClick={diveInClick}>
 					<h1 className='px-2 text-4xl font-extrabold capitalize opacity-0 mainText md:text-4xl lg:text-5xl xl:text-6xl font-revalia '>this is a UX/UI designer

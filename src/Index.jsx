@@ -9,7 +9,7 @@ import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact } from 
 import { SiBlender } from 'react-icons/si';
 import { DiPhotoshop } from 'react-icons/di';
 import iconsAnimation from './assets/compressed/iconsAnime.webm';
-import iconsAnimationMobile from './assets/iconsAnimeMobile.webm';
+import iconsAnimationMobile from './assets/compressed/iconsAnimeMobile.webm';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -188,7 +188,7 @@ const Index = ({ CanLoadMainContent }) => {
               <div className="flex justify-center ">
                 <video ref={iconsAnimationRef} autoPlay muted playsInline className=' mix-blend-lighten '  >
                   <source src={iconsAnimation} media='(min-width:799px)' type='video/webm' />
-                {/*   <source src={iconsAnimationMobile} media='(max-width:799px)' type='video/webm' /> */}
+                  <source src={iconsAnimationMobile} media='(max-width:799px)' type='video/webm' />
                 </video>
                 {/*  <video ref={iconsAnimationRef} muted playsInline className='hidden translate-y-11 mix-blend-lighten md:block'  >
           </video> */}
