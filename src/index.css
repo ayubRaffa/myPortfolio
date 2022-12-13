@@ -11,16 +11,21 @@
   src: url('./assets/font/PlayfairDisplayMediumItalic-8MaEg.ttf');
 }
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --color-bg: #0d1119;
-  --color-link: #b2c4fc;
+  --color-link: #fcb2b2;
 }
 
 @layer base {
+
+  main svg {
+    color: #8f1919
+  }
 
   body {
     @apply text-white;

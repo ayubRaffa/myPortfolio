@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import sphereAnime from './assets/compressed/sphereAnime.webm';
 import sphereAnimeCycle from './assets/compressed/sphereAnimeCycle.webm';
 import blueWaves from './assets/blueWaves.jpg';
-import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaFigma, FaHtml5, FaCss3, FaJs, FaGit, FaPhp, FaNodeJs, FaReact, FaDocker } from 'react-icons/fa';
 import { SiBlender } from 'react-icons/si';
 import { DiPhotoshop } from 'react-icons/di';
 import iconsAnimation from './assets/compressed/iconsAnime.webm';
@@ -200,13 +200,14 @@ const Index = ({ CanLoadMainContent }) => {
                   </p>
                   <p className=''>all of that had lead me to be able to perform at least a variety of tasks.  as such :</p>
                   <ul className=' pl-[calc(1rem+2vw)] list-disc flex flex-col gap-3 text-gray-300'>
-                    <li >build mock designs and wireframes for landing pages using <FaFigma color='#F55' />, <DiPhotoshop color='#F55' /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender color='#F55' /><span className='text-sm'>(blender.org)</span></a> </li>
-                    <li >Utilizing all of <FaHtml5 color='#F55' /> , <FaCss3 color='#F55' />  and <FaJs color='#F55' />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
-                    <li >Developing applications using <FaReact color='#F55' /> REACTJS while managing the state through REACT-QUERY</li>
-                    <li >initiate a <FaGit color='#F55' /> repository to track, regulate, and revise the changes in the code . </li>
+                    <li >build mock designs and wireframes for landing pages using <FaFigma />, <DiPhotoshop /> and  <a href="https://www.blender.org/" rel='noreferrer' target='_blank' className='flex items-center gap-2 text-gray-500 whitespace-pre '><SiBlender /><span className='text-sm'>(blender.org)</span></a> </li>
+                    <li >Utilizing all of <FaHtml5 /> , <FaCss3 />  and <FaJs />  to create accessible,functional user interfaces.  and a Mobile responsive user experience with flexbox an grid that allow Cross-platform accessibility to the Website on any device with primary use on mobile </li>
+                    <li >Developing applications using <FaReact /> REACTJS while managing the state through REACT-QUERY</li>
+                    <li >initiate a <FaGit /> repository to track, regulate, and revise the changes in the code . </li>
                     <li >Interact with public APIs to supply the app with the needed data for more user interaction, or scrap the data from a web with the help of RegEx or a third-party dependency, if no dedicated apis is available</li>
-                    <li >Create a server side application with <FaPhp color='#F11' />  or <FaNodeJs color='#F11' />  to interact with databases and apis by performing CRUD functions</li>
+                    <li >Create a server side application with <FaPhp />  or <FaNodeJs />  to interact with databases and apis by performing CRUD functions</li>
                     <li >design an integrated sql database with MYSQL or postgresSQL from scratch for storing and managing the data,   </li>
+                    <li>use docker <FaDocker /> platform to containerize an application and deploy it to aws  </li>
                     ...
                   </ul>
                 </div>

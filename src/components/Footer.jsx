@@ -75,7 +75,7 @@ const Content = {
         'span': "i'm open to any comments",
         'a': {
             'link': 'https://github.com/ayubRaffa/myPortfolio',
-            'text': 'go to github >'
+            'text': 'go to github > '
         }
     }
 } 
