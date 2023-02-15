@@ -165,7 +165,7 @@ const Index = ({ CanLoadMainContent }) => {
             <img src={blueWaves} alt="sphere" className='max-w-lg backgroundCircle' />
           </div>
           <div className=" relative  px-[calc(1rem+5vw)] max-w-[1000Px] my-24 ">
-            <div className='z-10 mix-blend-overlay -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a] blur-lg' />
+            <div className='z-10 mix-blend-darken -translate-x-6 rotate-[45deg] absolute bottom-0 pointer-events-none select-none left-0 right-0 h-[70%] bg-[#164d8a] blur-lg' />
             <p className='text-3xl font-extrabold tracking-wider text-center text-gray-400 capitalize font-PlayfairDisplayediumItalic'>
               i may be only a beginner with little experience... <br /> but i may become the <strong className='block text-4xl text-white uppercase font-PlayfairDisplayediumItalic '>best !</strong>
             </p>

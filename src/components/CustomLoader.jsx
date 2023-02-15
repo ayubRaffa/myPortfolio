@@ -106,12 +106,12 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 	const diveInClick = () => {
 		let mm = gsap.matchMedia()
 		mm.add({
-			isMobile: "(max-width:500px)",
-			isDesktop: "(min-width:500px)"
+			isMobile: "(max-width:768px)",
+			isDesktop: "(min-width:768px)"
 		}, (context) => {
 			let { isDesktop, isMobile } = context.conditions
 			gsap.to(".loading", {
-				duration: 3,
+				duration: 2.5,
 				scale: 1.4,
 				opacity: 0,
 				ease: "power.out",
@@ -119,7 +119,7 @@ const CustomLoader = ({ setCanLoadMainContent }) => {
 					if (isDesktop) { robitoRef.current.currentTime = 6; robitoRef.current.play() }
 					gsap.to('.robito_wrapper', {
 						xPercent: -120,
-						duration: 3,
+						duration: 2.5,
 						onComplete: () => {
 							gsap.to(".loading_Wrapper", { opacity: 0, duration: .5, display: "none", })
 							setCanLoadMainContent(true)

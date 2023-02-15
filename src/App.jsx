@@ -10,7 +10,8 @@ import { useRef } from "react";
 const App = () => {
 
   const App = useRef()
-  const [CanLoadMainContent, setCanLoadMainContent] = useState(false);
+  const [CanLoadMainContent, setCanLoadMainContent] = useState(true);
+
   useEffect(() => {
     const bgColors = ['#080a0f', '#080a10', '#0a0e14', '#030305', '#06070f']
     const linkColors = ['#c7f9dc', '#f2f9c7', '#f9cec7', '#f9bcf1', '#bcecf9']
@@ -22,11 +23,13 @@ const App = () => {
       if (j === 1) i--; else i++
       return iteratingColor
     }
+
     function getLinkColor() {
       const Color = linkColors[Math.floor(Math.random() * linkColors.length)]
       if (Color === randomColor) getLinkColor()
       return Color
     }
+
     if (CanLoadMainContent) {
       gsap.timeline({
         scrollTrigger: {
@@ -59,7 +62,7 @@ const App = () => {
 
   return (
     <>
-      <CustomLoader setCanLoadMainContent={setCanLoadMainContent} />
+      {/* <CustomLoader setCanLoadMainContent={setCanLoadMainContent} /> */}
       {CanLoadMainContent &&
         <div ref={App} className=" App max-w-screen min-h-screen bg-[color:var(--color-bg)] transition-colors duration-500 overflow-x-hidden ">{/* debug-screens */}
           <Navbar />

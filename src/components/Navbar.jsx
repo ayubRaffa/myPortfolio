@@ -7,7 +7,7 @@ const navbar = () => {
 
 
     return (
-        <div className='fixed z-50 top-0  left-0 w-[100vw]  bg-navbar'>
+        <div className='absolute z-50 top-0  left-0 w-[100vw]  bg-navbar'>
             {/* // * tabs   */}
             <ul className="flex items-center justify-start w-full list-none ">
                 <li className='ml-3'>

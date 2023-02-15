@@ -28,7 +28,7 @@
   }
 
   body {
-    @apply text-white;
+    @apply text-white overflow-x-hidden
   }
 
   ul {
@@ -85,7 +85,7 @@
 
   .stroke-blue-2 {
     @apply text-transparent;
-    -webkit-text-stroke: 2px #19548f;
+    -webkit-text-stroke: 2px #6c97c3;
   }
 
   .gradient {
@@ -95,6 +95,20 @@
   .letsDiveIN {
     animation: backgroundcolor 4s linear 4s infinite alternate-reverse;
   }
+
+  ::-webkit-scrollbar {
+    width: .5em;
+    height: .5em
+}
+::-webkit-scrollbar-button {
+    background: var(--color-bg)
+}
+::-webkit-scrollbar-track-piece {
+    background: var(--color-bg)
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-link)
+}
 
   @keyframes backgroundcolor {
     from {

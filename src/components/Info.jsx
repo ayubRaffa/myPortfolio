@@ -8,15 +8,15 @@ const Info = () => {
 
     return (
 
-        <section section className="bg-background-500 " > 
+        <section className="bg-background-500 " > 
             <div className="relative z-10 flex items-stretch justify-center gap-3 px-1 py-20 pb-40 md:gap-6 lg:gap-10 lg:px-6 bg-hero-cutout-pink-100 ">
                 <div className='absolute top-0 bottom-0 left-0 right-0 linear-gradient ' />
                 < div className=' absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[color:var(--color-bg)] to-transparent' />
                 <div className="basis-0 flex-[1] relative flex justify-center items-end flex-col gap-3 ">
                     <Article icon={<FaWhatsapp size='32' fill='#3378a0' />} content={'0604932189'} href={'https://wa.me/0604932189'} />
-                    <Article icon={<FaGithub size='32' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://wa.me/0604932189'} />
-                    <Article icon={<IoMail size='32' fill='#3378a0' />} content='idriss4991@gmail.com' href={'mailto:idriss4991@gmail.com'} />
-                    <Article icon={<FaHome size='32' fill='#3378a0' />} content={'40070,marrakech morocco'} />
+                    <Article icon={<FaGithub size='32' fill='#3378a0' />} content={'https://github.com/ayubRaffa'} href={'https://github.com/ayubRaffa'} />
+                    <Article icon={<IoMail size='32' fill='#3378a0' />} content='raffa4991@gmail.com' href={'mailto:raffa4991@gmail.com'} />
+                    <Article icon={<FaHome size='32' fill='#3378a0' />} content={'marrakech morocco'} />
                 </div>
                 <div className='w-[1px] gradient' />
                 <div className="basis-0 flex-[1]">
